@@ -91,5 +91,7 @@ welcome to the ![_config.yml]({{ site.baseurl }}/images/coolkids2.gif)
 
 ![_config.yml]({{ site.baseurl }}/images/bleh.gif)
 
+<img align=”right” src="https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/bleh.gif">
+
 [wow](https://gamrtiem.github.io/Hello-World/) 
 
