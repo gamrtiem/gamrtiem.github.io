@@ -2,7 +2,7 @@
 layout: post
 title: 
 ---
-welcome to the ![_config.yml]({{ site.baseurl }}/images/coolkids.gif)
+welcome to the ![_config.yml]({{ site.baseurl }}/images/coolkids2.gif)
 
 <marquee behavior="scroll" direction="left" scrollamount="50">
 <img src="https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/damce.gif">
