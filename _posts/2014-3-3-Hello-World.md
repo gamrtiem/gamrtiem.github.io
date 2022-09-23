@@ -88,9 +88,7 @@ title: welcome to the cool kids zone
 
 <center>jod i am so cool</center>
 
-<center>![_config.yml]({{ site.baseurl }}/images/bleh.gif)</center>
+![_config.yml]({{ site.baseurl }}/images/bleh.gif)
 
-
-
-<center>[wow](https://gamrtiem.github.io/Hello-World/)</center>
+[wow](https://gamrtiem.github.io/Hello-World/) 
 
