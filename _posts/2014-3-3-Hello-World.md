@@ -9,4 +9,4 @@ jod i am so cool
 
 [wow](https://gamrtiem.github.io/Hello-World/)
 
-<marquee behavior="scroll" direction="left"><img src="{{ site.baseurl }}/images/egg.gif"></marquee>
+<marquee behavior="scroll" direction="left"><img src="https://gamrtiem.github.io/images/egg.gif"></marquee>
