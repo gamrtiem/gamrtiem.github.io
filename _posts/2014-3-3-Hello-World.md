@@ -86,11 +86,11 @@ title: welcome to the cool kids zone
 <img src="https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/damce.gif">
 </marquee>
 
-jod i am so cool
+<center>jod i am so cool</center>
 
-![_config.yml]({{ site.baseurl }}/images/bleh.gif)
+<center>![_config.yml]({{ site.baseurl }}/images/bleh.gif)</center>
 
 
 
-[wow](https://gamrtiem.github.io/Hello-World/)
+<center>[wow](https://gamrtiem.github.io/Hello-World/)</center>
 
