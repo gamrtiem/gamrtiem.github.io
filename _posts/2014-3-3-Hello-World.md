@@ -9,4 +9,4 @@ jod i am so cool
 
 [wow](https://gamrtiem.github.io/Hello-World/)
 
-<marquee behavior="scroll" direction="left">Here is some scrolling text... right to left!</marquee>
+<marquee behavior="scroll" direction="left">![_config.yml]({{ site.baseurl }}/images/egg.gif)</marquee>
