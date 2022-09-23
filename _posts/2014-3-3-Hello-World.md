@@ -1,6 +1,6 @@
 ---
 layout: post
-title: welcome to the cool kids zone
+title: welcome to the ![_config.yml]({{ site.baseurl }}/images/coolkids.gif)
 ---
 
 <marquee behavior="scroll" direction="left" scrollamount="50">
