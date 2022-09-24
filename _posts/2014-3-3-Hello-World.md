@@ -90,8 +90,7 @@ welcome to the ![_config.yml]({{ site.baseurl }}/images/coolkids2.gif)
 <center>jod i am so cool</center>
 
 ![_config.yml]({{ site.baseurl }}/images/bleh.gif)
-
-<img align=”right” src=![_config.yml]({{ site.baseurl }}/images/bleh.gif)>
+<img src="https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/bleh.gif" img align=”right”>
 
 [wow](https://gamrtiem.github.io/Hello-World/) 
 
