@@ -1,5 +1,6 @@
 *{
 		font-family: "comicsans";
+		cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
 }
 
 :root {
@@ -10,11 +11,6 @@
   --sped: 2;
   --speed: 2s;
 }
-	    
-      body {
-	margin: 0;
-	cursor: url('/images/ezgif-1-b691d279d8.gif'), auto;
-      }
 .scroller {
   overflow-y: scroll;
   scrollbar-color: #7ea3a2 #9fcdcc;
@@ -45,7 +41,7 @@ para {
 	font-family: "comicsans";
 }
 html{
-	
+	cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
 	background-color: #7ea3a2;
 }
 th {
