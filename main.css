@@ -11,6 +11,9 @@
   --spin: 360deg;
   --sped: 2;
   --speed: 2s;
+  --mouseposx: 1px;
+  --mouseposy: 1px;
+  --size: 10px;
 }
 .scroller {
   overflow-y: scroll;
@@ -93,15 +96,24 @@ border:1px solid red;
 #demo {
 	color:red;
 }
+#box {
+  border: var(--size) solid white;
+  opacity: 0.5;
+  position: absolute;
+  left: var(--mouseposx);
+  top: var(--mouseposy);
+  color: #F3D2F7;
+  animation: example .5s linear infinite;
+}
 @keyframes rotateAnimation {
 to {transform: rotateY(var(--spin));}
 }
 @keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+  0%   {border: var(--size) solid red; top: calc(var(--mouseposy)); opacity: 0.4;}
+  25%  {border: var(--size) solid yellow; top: calc(var(--mouseposy) + 10px); opacity: 0.3;}
+  50%  {border: var(--size) solid blue; top: calc(var(--mouseposy) + 20px); opacity: 0.2;}
+  75%  {border: var(--size) solid green; top: calc(var(--mouseposy) + 30px); opacity: 0.1;}
+  100% {border: var(--size) solid red; top: calc(var(--mouseposy) + 40px); opacity: 0;}
 }
 /* if the browser window is at least 800px-s wide: */
 @media screen and (min-width: 0px) {
