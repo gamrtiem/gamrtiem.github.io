@@ -27,7 +27,7 @@ function speedFunction() {
 	let y = x + "s";
 	r.style.setProperty('--speed', y );
 	r.style.setProperty('--sped', x );
-	
+	document.getElementById('demo').innerHTML = ""
 	}else{
 	document.getElementById('demo').innerHTML = "error: too silly !!!"
 	}
@@ -43,6 +43,7 @@ function slowFunction() {
 	let y = x + "s";
 	r.style.setProperty('--speed', y );
 	r.style.setProperty('--sped', x );
+	document.getElementById('demo').innerHTML = ""
 }
 </script>
 <body>
