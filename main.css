@@ -146,4 +146,5 @@ to {transform: rotateY(var(--spin));}
 /*}*/
 a {
 	color: #F3D2F7;
+	text-decoration: none;
 }
