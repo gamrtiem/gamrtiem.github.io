@@ -8,15 +8,6 @@ window.onload = function () {
 	var r = document.querySelector(':root');
 	r.style.setProperty('--blue', z);
 }
-onmousemove = function(e){
-	
-	var r = document.querySelector(':root');
-	let x = e.clientX + "px";
-	let y = e.clientY + "px";
-	r.style.setProperty('--mouseposx', x );
-	r.style.setProperty('--mouseposy', y);
-	//console.log("mouse location:", x, y);
-}
 function speedFunction() {
 	var r = document.querySelector(':root');
 	const root = document.querySelector(':root');
@@ -31,9 +22,6 @@ function speedFunction() {
 	}else{
 	
 	}
-	
-	
-
 }
 function slowFunction() {
 	var r = document.querySelector(':root');
@@ -48,8 +36,9 @@ function slowFunction() {
 <body>
 	<table class="tabl">
 		<tr>
-			<th style="width:100%; height:100%;"><img id="funy" src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true"  width = 100% height = 204px></th>
+			<th><img id="funy" src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true"  width = 100% height = 204px></th>
 		</tr>
 	</table>
+
 </body>
 
