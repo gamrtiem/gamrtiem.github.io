@@ -1,6 +1,5 @@
 *{
 		font-family: "determination";
-		cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
 }
 
 :root {
@@ -14,6 +13,16 @@
   --mouseposx: 1px;
   --mouseposy: 1px;
   --size: 10px;
+  --time: 1;
+  --time2: 1;
+  --mouseposx2: 1px;
+  --mouseposy2: 1px;
+  --mouseposx3: 1px;
+  --mouseposy3: 1px;
+  --mouseposx4: 1px;
+  --mouseposy4: 1px;
+  --mouseposx5: 1px;
+  --mouseposy5: 1px;
 }
 .scroller {
   overflow-y: scroll;
@@ -45,7 +54,6 @@ para {
 	font-family: "determination";
 }
 html{
-	cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
 	background-color: #F3D2F7;
 }
 th {
@@ -58,10 +66,7 @@ body {
 	overflow-y:hidden;
 	height:100%;
 	
-
-}
-td {
-  
+cursor: url('/images/ezgif-1-b691d279d8.gif'), auto;
 }
 
 /*table.tabl {
@@ -96,6 +101,9 @@ border:1px solid red;
 #demo {
 	color:red;
 }
+
+
+
 #box {
   border: var(--size) solid white;
   opacity: 0.5;
@@ -103,17 +111,63 @@ border:1px solid red;
   left: var(--mouseposx);
   top: var(--mouseposy);
   color: #F3D2F7;
-  animation: example .5s linear infinite;
+  animation: example 1s linear infinite;
 }
+
+
+
+#box2 {
+  border: var(--size) solid white;
+  opacity: 0.5;
+  position: absolute;
+  left: var(--mouseposx1);
+  top: var(--mouseposy1);
+  color: #F3D2F7;
+  animation: example 1s linear infinite;
+}
+
+
+#box3 {
+  border: var(--size) solid white;
+  opacity: 0.5;
+  position: absolute;
+  left: var(--mouseposx2);
+  top: var(--mouseposy2);
+  color: #F3D2F7;
+  animation: example 1s linear infinite;
+}
+
+
+#box4 {
+  border: var(--size) solid white;
+  opacity: 0.5;
+  position: absolute;
+  left: var(--mouseposx3);
+  top: var(--mouseposy3);
+  color: #F3D2F7;
+  animation: example 1s linear infinite;
+}
+
+#box5 {
+  border: var(--size) solid white;
+  opacity: 0.5;
+  position: absolute;
+  left: var(--mouseposx4);
+  top: var(--mouseposy4);
+  color: #F3D2F7;
+  animation: example 1s linear infinite;
+}
+
+
 @keyframes rotateAnimation {
 to {transform: rotateY(var(--spin));}
 }
 @keyframes example {
-  0%   {border: var(--size) solid red; top: calc(var(--mouseposy)); opacity: 0.4;}
-  25%  {border: var(--size) solid yellow; top: calc(var(--mouseposy) + 10px); opacity: 0.3;}
-  50%  {border: var(--size) solid blue; top: calc(var(--mouseposy) + 20px); opacity: 0.2;}
-  75%  {border: var(--size) solid green; top: calc(var(--mouseposy) + 30px); opacity: 0.1;}
-  100% {border: var(--size) solid red; top: calc(var(--mouseposy) + 40px); opacity: 0;}
+  0%   { border: var(--size) solid red; opacity: .5; }
+  25%  {border: var(--size) solid yellow; opacity: .4;}
+  50%  {border: var(--size) solid blue; opacity: .3;}
+  75%  {border: var(--size) solid green; opacity: .2;}
+  100% {border: var(--size) solid red; opacity: .1;}
 }
 /* if the browser window is at least 800px-s wide: */
 @media screen and (min-width: 0px) {

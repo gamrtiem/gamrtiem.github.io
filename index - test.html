@@ -5,64 +5,41 @@
 <script language='javascript'>
 
 
+function timer(){
+	var r = document.querySelector(':root');
+	const date = new Date();
+	
+	r.style.setProperty('--time2', Date.now());
+	setTimeout(timer, 100);
+}
+
 window.onload = function () {
+var r = document.querySelector(':root');
+	r.style.setProperty('--time', Date.now());
 	let z = (window.innerHeight - 243) + "px";
 	var r = document.querySelector(':root');
 	r.style.setProperty('--blue', z);
+	timer();
 }
 
 onmousemove = function(e){
-
-
-	function mouse1(){
 	var r = document.querySelector(':root');
-	let x = e.clientX + "px";
-	let y = e.clientY + "px";
-	r.style.setProperty('--mouseposy', y);
-	r.style.setProperty('--mouseposx', x );
+	const root = document.querySelector(':root');
+	const compStyles = window.getComputedStyle(root);
+	const date = new Date();
+	var timemath = compStyles.getPropertyValue('--time2') - compStyles.getPropertyValue('--time');
+	console.log(timemath);
+	if(timemath > 100 && compStyles.getPropertyValue('--time') != 1){
+	
+		
+		var r = document.querySelector(':root');
+		let x = e.clientX + "px";
+		let y = e.clientY + "px";
+		r.style.setProperty('--mouseposy', y);
+		r.style.setProperty('--mouseposx', x );
+		r.style.setProperty('--time2', compStyles.getPropertyValue('--time2') - timemath);
+		r.style.setProperty('--time', Date.now());
 	}
-	setTimeout(mouse1, 100);
-	
-	
-	function mouse2(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + "px";
-	let y = e.clientY + "px";
-	r.style.setProperty('--mouseposy1', y);
-	r.style.setProperty('--mouseposx1', x );
-	}
-	setTimeout(mouse2, 150);
-	
-	
-	function mouse3(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + "px";
-	let y = e.clientY + "px";
-	r.style.setProperty('--mouseposy2', y);
-	r.style.setProperty('--mouseposx2', x );
-	}
-	setTimeout(mouse3, 200);
-	
-	
-	function mouse4(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + "px";
-	let y = e.clientY + "px";
-	r.style.setProperty('--mouseposy3', y);
-	r.style.setProperty('--mouseposx3', x );
-	}
-	setTimeout(mouse4, 250);
-	
-	
-	function mouse5(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + "px";
-	let y = e.clientY + "px";
-	r.style.setProperty('--mouseposy4', y);
-	r.style.setProperty('--mouseposx4', x );
-	}
-	setTimeout(mouse5, 300);
-	
 	
 	
 	//console.log("mouse location:", x, y);
@@ -96,18 +73,8 @@ function slowFunction() {
 	document.getElementById('demo').innerHTML = ""
 }
 </script>
-<style>
-* {
-cursor: url('/favicon.ico'), auto;
-}
-
-</style>
 <body>
 <div id="box"></div>
-<div id="box2"></div>
-<div id="box3"></div>
-<div id="box4"></div>
-<div id="box5"></div>
 	<table class="tabl">
 		<tr>
 			<th style="width:10%; height:216px;"><img id="funy" src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true"  width = 100% height = 204px><p id="demo"></p></th>
