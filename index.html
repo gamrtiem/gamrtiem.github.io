@@ -21,19 +21,18 @@ function speedFunction() {
 	var r = document.querySelector(':root');
 	const root = document.querySelector(':root');
 	const compStyles = window.getComputedStyle(root);
-	if(compStyles.getPropertyValue('--sped') != 2.3283064365386963e-10) {
+
 	
 	let x = compStyles.getPropertyValue('--sped')/2;
 	let y = x + "s";
 	r.style.setProperty('--speed', y );
 	r.style.setProperty('--sped', x );
-	document.getElementById('demo').innerHTML = ""
-	}else{
+	
+	if(compStyles.getPropertyValue('--sped') != 2.3283064365386963e-10) {
 	document.getElementById('demo').innerHTML = "error: too silly !!!"
+	} else {
+	document.getElementById('demo').innerHTML = ""
 	}
-	
-	
-
 }
 function slowFunction() {
 	var r = document.querySelector(':root');
