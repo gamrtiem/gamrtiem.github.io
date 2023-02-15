@@ -4,7 +4,7 @@
 <link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
 <script language='javascript'>
 window.onload = function () {
-	let z = (window.innerHeight - 243) + "px";
+	let z = (window.innerHeight - 20) + "px";
 	var r = document.querySelector(':root');
 	r.style.setProperty('--blue', z);
 }
@@ -63,7 +63,8 @@ function slowFunction() {
 }
 html{
 	cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
-	background-color: #7ea3a2;
+	background-color: #F3D2F7;
+	
 }
 
 body {
@@ -79,8 +80,9 @@ body {
 	src: url("comicsans.ttf");
 }
 table.tabl {
-	  height: var(--blue);
+	height: var(--blue);
 	width: 100%;
+	background-color: #1d1d1d;
 }
 
 
@@ -91,12 +93,17 @@ table.tabl {
 	background-color: #9fcdcc;
 	color: white;
 }
-#funy {
-	animation: rotateAnimation var(--speed) linear infinite;
+#funny {
+	animation: rotateAnimation1 var(--speed) linear infinite, example var(--speed) linear infinite;
 }
-@keyframes rotateAnimation {
+@keyframes rotateAnimation1 {
 to {transform: rotateY(var(--spin));}
 }
+@keyframes rotateAnimation2 {
+  from {transform: rotateX(1deg);}
+  to {transform: rotateX(360deg);}
+}
+
 @keyframes example {
   0%   {background-color:red; left:0px; top:0px;}
   25%  {background-color:yellow; left:200px; top:0px;}
@@ -104,11 +111,16 @@ to {transform: rotateY(var(--spin));}
   75%  {background-color:green; left:0px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
 }
+h4 {
+	color:white;
+}
+
 </style>
 <body>
 	<table class="tabl">
 		<tr>
-			<th><img id="funy" src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true"  width = 100% height = 204px></th>
+			<th style="height:var(--blue);"><img id="funny" src="https://cdn.discordapp.com/attachments/938226469480583209/1075210788911976508/heart.gif"><img id="funy" src="https://cdn.discordapp.com/attachments/938226469480583209/1075209638909317180/2813BDED-74F6-43EC-9011-FC3E19F36568.jpg"  width = 25% height = 40%><img id="funny" src="https://cdn.discordapp.com/attachments/938226469480583209/1075210788911976508/heart.gif"> <h4> lov u <3 </h4></th>
+			
 		</tr>
 	</table>
 
