@@ -90,6 +90,9 @@ border:1px solid red;
 #funy {
 	animation: rotateAnimation var(--speed) linear infinite;
 }
+#demo {
+	color:red;
+}
 @keyframes rotateAnimation {
 to {transform: rotateY(var(--spin));}
 }
