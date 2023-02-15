@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <title>the coolest and awesome website</title>
-<link rel="stylesheet" href="2014-3-3-naso_main.css">
+<!--link rel="stylesheet" href="2014-3-3-naso_main.css"-->
 <link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
 <script language='javascript'>
 window.onload = function () {
@@ -33,6 +33,78 @@ function slowFunction() {
 	r.style.setProperty('--sped', x );
 }
 </script>
+<style>
+*{
+		font-family: "comicsans";
+		cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
+}
+
+:root {
+  --blue: 100px;
+  --firstbox: 10px;
+  --white: 204px; 
+  --spi: 360;
+  --spin: 360deg;
+  --sped: 2;
+  --speed: 2s;
+}
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: #7ea3a2 #9fcdcc;
+}
+/* width */
+::-webkit-scrollbar {
+  color: #7ea3a2;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7ea3a2; 
+}
+html{
+	cursor: url("https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif");
+	background-color: #7ea3a2;
+}
+
+body {
+	overflow-x:hidden;
+	overflow-y:hidden;
+	height:100%;
+}
+
+
+
+@font-face {
+	font-family: "comicsans";
+	src: url("comicsans.ttf");
+}
+table.tabl {
+	  height:100%;
+	width: 100%;
+}
+
+
+
+
+.button{
+	border:2px solid #7ea3a2;  
+	background-color: #9fcdcc;
+	color: white;
+}
+#funy {
+	animation: rotateAnimation var(--speed) linear infinite;
+}
+@keyframes rotateAnimation {
+to {transform: rotateY(var(--spin));}
+}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+</style>
 <body>
 	<table class="tabl">
 		<tr>
