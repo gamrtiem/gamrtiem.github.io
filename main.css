@@ -119,7 +119,7 @@ border:1px solid red;
 
 #box2 {
   border: var(--size) solid white;
-  opacity: 0.5;
+  opacity: 0.4;
   position: absolute;
   left: var(--mouseposx1);
   top: var(--mouseposy1);
@@ -130,7 +130,7 @@ border:1px solid red;
 
 #box3 {
   border: var(--size) solid white;
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   left: var(--mouseposx2);
   top: var(--mouseposy2);
@@ -141,7 +141,7 @@ border:1px solid red;
 
 #box4 {
   border: var(--size) solid white;
-  opacity: 0.5;
+  opacity: 0.2;
   position: absolute;
   left: var(--mouseposx3);
   top: var(--mouseposy3);
@@ -151,7 +151,7 @@ border:1px solid red;
 
 #box5 {
   border: var(--size) solid white;
-  opacity: 0.5;
+  opacity: 0.1;
   position: absolute;
   left: var(--mouseposx4);
   top: var(--mouseposy4);
@@ -164,11 +164,11 @@ border:1px solid red;
 to {transform: rotateY(var(--spin));}
 }
 @keyframes example {
-  0%   { border: var(--size) solid red; opacity: .5; }
-  25%  {border: var(--size) solid yellow; opacity: .5;}
-  50%  {border: var(--size) solid blue; opacity: .5;}
-  75%  {border: var(--size) solid green; opacity:.5;}
-  100% {border: var(--size) solid red; opacity: .5;}
+  0%   { border: var(--size) solid red; }
+  25%  {border: var(--size) solid yellow;}
+  50%  {border: var(--size) solid blue;}
+  75%  {border: var(--size) solid green; }
+  100% {border: var(--size) solid red;}
 }
 /* if the browser window is at least 800px-s wide: */
 @media screen and (min-width: 0px) {
