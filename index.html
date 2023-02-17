@@ -78,11 +78,10 @@ function speedFunction() {
 	r.style.setProperty('--speed', y );
 	r.style.setProperty('--sped', x );
 	
-	if(compStyles.getPropertyValue('--sped') == 2.3283064365386963e-10) {
-	
-	document.getElementById('demo').innerHTML = "error: too silly !!!"
-	} else {
+	if(compStyles.getPropertyValue('--sped') != 2.3283064365386963e-10) {
 	document.getElementById('demo').innerHTML = ""
+	} else {
+		document.getElementById('demo').innerHTML = "error: too silly !!!"
 	}
 }
 function slowFunction() {
