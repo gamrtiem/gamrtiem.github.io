@@ -16,14 +16,14 @@
   --size: 10px;
   --time: 1;
   --time2: 1;
-  --mouseposx2: 1px;
-  --mouseposy2: 1px;
-  --mouseposx3: 1px;
-  --mouseposy3: 1px;
-  --mouseposx4: 1px;
-  --mouseposy4: 1px;
-  --mouseposx5: 1px;
-  --mouseposy5: 1px;
+  --mouseposx2: -91px;
+  --mouseposy2: -91px;
+  --mouseposx3: -91px;
+  --mouseposy3: -91px;
+  --mouseposx4: -91px;
+  --mouseposy4: -91px;
+  --mouseposx5: -91px;
+  --mouseposy5: -91px;
 }
 .scroller {
   overflow-y: scroll;
