@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<title>the true and neo website</title>
+<link rel="stylesheet" href="main.css">
+<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
+<script language='javascript'>
+
+
+window.onload = function () {
+	let z = (window.innerHeight - 223) + "px";
+	let y = (160) + "px";
+	var r = document.querySelector(':root');
+	r.style.setProperty('--blue', z);
+	r.style.setProperty('--smallbox', y);
+}
+onmousemove = function(e){
+	function mouse1(){
+	var r = document.querySelector(':root');
+	let x = e.clientX + 2 + "px";
+	let y = e.clientY + 2 + "px";
+	r.style.setProperty('--mouseposy', y);
+	r.style.setProperty('--mouseposx', x );
+	}
+	setTimeout(mouse1, 0);
+	
+	
+	function mouse2(){
+	var r = document.querySelector(':root');
+	let x = e.clientX + 2 + "px";
+	let y = e.clientY + 2 + "px";
+	r.style.setProperty('--mouseposy1', y);
+	r.style.setProperty('--mouseposx1', x );
+	}
+	setTimeout(mouse2, 35);
+	
+	
+	function mouse3(){
+	var r = document.querySelector(':root');
+	let x = e.clientX + 2 + "px";
+	let y = e.clientY + 2 + "px";
+	r.style.setProperty('--mouseposy2', y);
+	r.style.setProperty('--mouseposx2', x );
+	}
+	setTimeout(mouse3, 70);
+	
+	
+	function mouse4(){
+	var r = document.querySelector(':root');
+	let x = e.clientX + 2 + "px";
+	let y = e.clientY + 2 + "px";
+	r.style.setProperty('--mouseposy3', y);
+	r.style.setProperty('--mouseposx3', x );
+	}
+	setTimeout(mouse4, 105);
+	
+	
+	function mouse5(){
+	var r = document.querySelector(':root');
+	let x = e.clientX + 2 + "px";
+	let y = e.clientY + 2 + "px";
+	r.style.setProperty('--mouseposy4', y);
+	r.style.setProperty('--mouseposx4', x );
+	}
+	setTimeout(mouse5, 140);
+	
+	
+	
+	//console.log("mouse location:", x, y);
+}
+function speedFunction() {
+	var r = document.querySelector(':root');
+	const root = document.querySelector(':root');
+	const compStyles = window.getComputedStyle(root);
+	
+	let x = compStyles.getPropertyValue('--sped')/2;
+	let y = x + "s";
+	r.style.setProperty('--speed', y );
+	r.style.setProperty('--sped', x );
+	
+	if(compStyles.getPropertyValue('--sped') != 2.3283064365386963e-10) {
+	document.getElementById('demo').innerHTML = ""
+	} else {
+		document.getElementById('demo').innerHTML = "error: too silly !!!"
+	}
+}
+function slowFunction() {
+	var r = document.querySelector(':root');
+	const root = document.querySelector(':root');
+	const compStyles = window.getComputedStyle(root);
+	let x = compStyles.getPropertyValue('--sped') * 2;
+	let y = x + "s";
+	r.style.setProperty('--speed', y );
+	r.style.setProperty('--sped', x );
+	document.getElementById('demo').innerHTML = ""
+}
+</script>
+<body>
+<div id="box"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
+<div id="box5"></div>
+	<table class="tabl">
+		<tr>
+			<th style="width:10%; height:var(--smallbox);"><img id="funy" src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true"  width=100% height=160px><p id="demo"></p></th>
+			<th style="width:90%; height:var(--smallbox);"><h1>audio jungle</h1></th> 
+		</tr>
+	</table>
+	<table class="tabl2">
+		<tr>
+			<th style="width:9.97%;text-align:left;box-sizing: content-box; ">
+			<a href="https://icebro.party/">home</h1> <br> <br> <br> <br> 
+			<a href="https://icebro.party/aboutme">about me </h1> <br> <br>  <br> <br> 		
+			<a href="https://icebro.party/blog">blog</h1> <br> <br> <br> <br> 
+			<a href="https://icebro.party/projects">projects</h1> <br> <br> <br> <br> 
+			</th>
+			<th style="text-align:left;display:block; overflow-y:scroll;   height: var(--blue);    box-sizing: content-box; " class="scroller"><!--img src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true" width = 10% height = 100%--> 
+				<h2>
+			<p style="font-size: 15px;"> 
+        among
+			</p>
+ 				</h2>
+			</th>
+		</tr>
+	</table>
+</body>
