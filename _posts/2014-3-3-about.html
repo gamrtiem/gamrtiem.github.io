@@ -27,6 +27,13 @@
 <script language='javascript'>
 
 
+window.onresize = function() {
+	let z = (window.innerHeight - 223) + "px";
+	let y = (160) + "px";
+	var r = document.querySelector(':root');
+	r.style.setProperty('--blue', z);
+	r.style.setProperty('--smallbox', y);
+}
 window.onload = function () {
 	let z = (window.innerHeight - 223) + "px";
 	let y = (160) + "px";
