@@ -219,3 +219,13 @@ a {
 	color: #F3D2F7;
 	text-decoration: none;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #f3d2f7;
+}
+
+::selection {
+  color: red;
+  background: #f3d2f7;
+}
