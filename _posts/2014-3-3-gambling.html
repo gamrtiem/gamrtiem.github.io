@@ -17,6 +17,8 @@ window.onload = function () {
 	var r = document.querySelector(':root');
 	r.style.setProperty('--blue', z);
 	r.style.setProperty('--smallbox', y);
+	document.getElementById('volume').innerHTML = "1"
+	document.getElementById('time').innerHTML = "0/" + (Math.floor((document.getElementById('player').duration -document.getElementById('player').duration%.1)*1000))/1000
 }
 onmousemove = function(e){
 	function mouse1(){
@@ -98,6 +100,69 @@ function slowFunction() {
 	r.style.setProperty('--sped', x );
 	document.getElementById('demo').innerHTML = ""
 }
+
+function VolumeUpFunction() {
+	document.getElementById('player').volume = (Math.floor((document.getElementById('player').volume + 0.1)*1000))/1000
+	document.getElementById('volume').innerHTML = document.getElementById('player').volume;
+}
+function VolumeDownFunction() {
+	document.getElementById('player').volume = (Math.floor((document.getElementById('player').volume - 0.1)*1000))/1000; 
+	
+	document.getElementById('volume').innerHTML = document.getElementById('player').volume;
+}
+function PlayFunction() {
+	document.getElementById('player').play();
+	document.getElementById('time').innerHTML = document.getElementById('player').currentTime - document.getElementById('player').currentTime%.1;
+	x.a = document.getElementById('player').currentTime - document.getElementById('player').currentTime%.1;
+}
+function PauseFunction() {
+	document.getElementById('player').pause();
+	document.getElementById('time').innerHTML = document.getElementById('player').currentTime;
+}
+
+
+
+x = {
+  aInternal: 10,
+  aListener: function(val) {},
+  set a(val) {
+    this.aInternal = val;
+    this.aListener(val);
+  },
+  get a() {
+    return this.aInternal;
+  },
+  registerListener: function(listener) {
+    this.aListener = listener;
+  }
+}
+
+x.registerListener(function(val) {
+  document.getElementById('time').innerHTML = (Math.floor((document.getElementById('player').currentTime -document.getElementById('player').currentTime%.1)*1000))/1000
+;
+  slowedCode()
+
+});
+
+x.a = 42;
+
+
+
+
+
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+async function slowedCode() {
+    document.getElementById('time').innerHTML = (Math.floor((document.getElementById('player').currentTime -document.getElementById('player').currentTime%.1)*1000))/1000 + "/" + (Math.floor((document.getElementById('player').duration -document.getElementById('player').duration%.1)*1000))/1000
+
+    await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
+    x.a = (Math.floor((document.getElementById('player').currentTime -document.getElementById('player').currentTime%.1)*1000))/1000
+
+}
+
+
 </script>
 <body>
 <div id="box"></div>
@@ -153,6 +218,16 @@ function slowFunction() {
 			<audio controls>
 				<source src="../sfx/🎵WMS G+ Deluxe Slot Machines Soundtrack - Mega Big Win [t1ELUU-LdQQ].mp3" type="audio/mpeg">
 			</audio> <br> 
+			
+			<audio id="player" src="../sfx/Cash Register Sound Effect [ZeET7Z1ZGlw].mp3"></audio>
+			<div> 
+				<button class="button" style="margin-left:10px;" onclick="PlayFunction()">Play</button>
+				<a id="time" style="margin-right:-10px;"> </a>
+				<button class="button" style="margin-left:10px;" onclick="PauseFunction()">Pause</button> 
+				<button class="button" style="margin-left:40px;" onclick="VolumeUpFunction()">Vol +</button> 
+				<a id="volume" style="margin-right:-10px;"> </a>
+				<button class="button" style="margin-left:10px;" onclick="VolumeDownFunction()">Vol -</button> 
+			</div>
 			
 			</th>
 		</tr>
