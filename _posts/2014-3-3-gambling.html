@@ -25,6 +25,16 @@ window.onload = function () {
 	document.getElementById('timeB').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerB').duration -document.getElementById('playerB').duration%.1)*1000))/1000
 	document.getElementById('volumeC').innerHTML = "1.0"
 	document.getElementById('timeC').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerC').duration -document.getElementById('playerC').duration%.1)*1000))/1000
+	document.getElementById('volumeD').innerHTML = "1.0"
+	document.getElementById('timeD').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerD').duration -document.getElementById('playerD').duration%.1)*1000))/1000
+	document.getElementById('volumeE').innerHTML = "1.0"
+	document.getElementById('timeE').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerE').duration -document.getElementById('playerE').duration%.1)*1000))/1000
+	document.getElementById('volumeF').innerHTML = "1.0"
+	document.getElementById('timeF').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerF').duration -document.getElementById('playerF').duration%.1)*1000))/1000
+	document.getElementById('volumeG').innerHTML = "1.0"
+	document.getElementById('timeG').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000
+	document.getElementById('volumeH').innerHTML = "1.0"
+	document.getElementById('timeH').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000
 }
 onmousemove = function(e){
 	function mouse1(){
@@ -383,6 +393,334 @@ c.registerListener(function(val) {
 	document.getElementById('timeC').innerHTML = (document.getElementById('playerC').currentTime - document.getElementById('playerC').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerC').duration -document.getElementById('playerC').duration%.1)*1000))/1000;;
 	c.b = document.getElementById('playerC').currentTime - document.getElementById('playerC').currentTime%.1;
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function VolumeUpFunctionD() {
+	document.getElementById('playerD').volume = ((Math.floor((document.getElementById('playerD').volume + 0.1)*1000))/1000).toFixed(2);
+	document.getElementById('volumeD').innerHTML = document.getElementById('playerD').volume;
+	if (document.getElementById('volumeD').innerHTML == 1){
+		document.getElementById('volumeD').innerHTML = "1.0"
+	}
+}
+function VolumeDownFunctionD() {
+	document.getElementById('playerD').volume = ((Math.floor((document.getElementById('playerD').volume - 0.1)*1000))/1000).toFixed(2); 
+	
+	document.getElementById('volumeD').innerHTML = document.getElementById('playerD').volume;
+}
+
+function PauseFunctionD() {
+	document.getElementById('playerD').pause();
+	document.getElementById('timeD').innerHTML = (document.getElementById('playerD').currentTime - document.getElementById('playerD').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerD').duration -document.getElementById('playerD').duration%.1)*1000))/1000;
+}
+
+
+
+
+
+
+D.b = 42;
+
+
+
+
+async function slowedCodeD() {
+    document.getElementById('timeD').innerHTML = ((Math.floor((document.getElementById('playerD').currentTime -document.getElementById('playerD').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerD').duration -document.getElementById('playerD').duration%.1)*1000))/1000
+
+    await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
+    D.b = (Math.floor((document.getElementById('playerD').currentTime -document.getElementById('playerD').currentTime%.1)*1000))/1000
+
+}
+
+
+
+function PlayFunctionD() {
+D = {
+  bInternal: 10,
+  bListener: function(val) {},
+  set b(val) {
+    this.bInternal = val;
+    this.bListener(val);
+  },
+  get b() {
+    return this.bInternal;
+  },
+  registerListener: function(listener) {
+    this.bListener = listener;
+  }
+}
+D.registerListener(function(val) {
+  document.getElementById('timeD').innerHTML = ((Math.floor((document.getElementById('playerD').currentTime -document.getElementById('playerD').currentTime%.1)*1000))/1000).toFixed(1);
+;
+  slowedCodeD()
+
+});
+	document.getElementById('playerD').play();
+	document.getElementById('timeD').innerHTML = (document.getElementById('playerD').currentTime - document.getElementById('playerD').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerD').duration -document.getElementById('playerD').duration%.1)*1000))/1000;;
+	D.b = document.getElementById('playerD').currentTime - document.getElementById('playerC').currentTime%.1;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function VolumeUpFunctionE() {
+	document.getElementById('playerE').volume = ((Math.floor((document.getElementById('playerE').volume + 0.1)*1000))/1000).toFixed(2);
+	document.getElementById('volumeE').innerHTML = document.getElementById('playerE').volume;
+	if (document.getElementById('volumeE').innerHTML == 1){
+		document.getElementById('volumeE').innerHTML = "1.0"
+	}
+}
+function VolumeDownFunctionE() {
+	document.getElementById('playerE').volume = ((Math.floor((document.getElementById('playerE').volume - 0.1)*1000))/1000).toFixed(2); 
+	
+	document.getElementById('volumeE').innerHTML = document.getElementById('playerE').volume;
+}
+
+function PauseFunctionE() {
+	document.getElementById('playerE').pause();
+	document.getElementById('timeE').innerHTML = (document.getElementById('playerE').currentTime - document.getElementById('playerE').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerE').duration -document.getElementById('playerE').duration%.1)*1000))/1000;
+}
+
+
+
+
+
+
+E.b = 42;
+
+
+
+
+async function slowedCodeE() {
+    document.getElementById('timeE').innerHTML = ((Math.floor((document.getElementById('playerE').currentTime -document.getElementById('playerE').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerE').duration -document.getElementById('playerE').duration%.1)*1000))/1000
+
+    await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
+    E.b = (Math.floor((document.getElementById('playerE').currentTime -document.getElementById('playerE').currentTime%.1)*1000))/1000
+
+}
+
+
+
+function PlayFunctionE() {
+E = {
+  bInternal: 10,
+  bListener: function(val) {},
+  set b(val) {
+    this.bInternal = val;
+    this.bListener(val);
+  },
+  get b() {
+    return this.bInternal;
+  },
+  registerListener: function(listener) {
+    this.bListener = listener;
+  }
+}
+E.registerListener(function(val) {
+  document.getElementById('timeE').innerHTML = ((Math.floor((document.getElementById('playerE').currentTime -document.getElementById('playerE').currentTime%.1)*1000))/1000).toFixed(1);
+;
+  slowedCodeE()
+
+});
+	document.getElementById('playerE').play();
+	document.getElementById('timeE').innerHTML = (document.getElementById('playerE').currentTime - document.getElementById('playerE').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerE').duration -document.getElementById('playerE').duration%.1)*1000))/1000;;
+	E.b = document.getElementById('playerE').currentTime - document.getElementById('playerC').currentTime%.1;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function VolumeUpFunctionF() {
+	document.getElementById('playerF').volume = ((Math.floor((document.getElementById('playerF').volume + 0.1)*1000))/1000).toFixed(2);
+	document.getElementById('volumeF').innerHTML = document.getElementById('playerF').volume;
+	if (document.getElementById('volumeF').innerHTML == 1){
+		document.getElementById('volumeF').innerHTML = "1.0"
+	}
+}
+function VolumeDownFunctionF() {
+	document.getElementById('playerF').volume = ((Math.floor((document.getElementById('playerF').volume - 0.1)*1000))/1000).toFixed(2); 
+	
+	document.getElementById('volumeF').innerHTML = document.getElementById('playerF').volume;
+}
+
+function PauseFunctionF() {
+	document.getElementById('playerF').pause();
+	document.getElementById('timeF').innerHTML = (document.getElementById('playerF').currentTime - document.getElementById('playerF').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerF').duration -document.getElementById('playerF').duration%.1)*1000))/1000;
+}
+
+
+
+
+
+
+F.b = 42;
+
+
+
+
+async function slowedCodeF() {
+    document.getElementById('timeF').innerHTML = ((Math.floor((document.getElementById('playerF').currentTime -document.getElementById('playerF').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerF').duration -document.getElementById('playerF').duration%.1)*1000))/1000
+
+    await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
+    F.b = (Math.floor((document.getElementById('playerF').currentTime -document.getElementById('playerF').currentTime%.1)*1000))/1000
+
+}
+
+
+
+function PlayFunctionF() {
+F = {
+  bInternal: 10,
+  bListener: function(val) {},
+  set b(val) {
+    this.bInternal = val;
+    this.bListener(val);
+  },
+  get b() {
+    return this.bInternal;
+  },
+  registerListener: function(listener) {
+    this.bListener = listener;
+  }
+}
+F.registerListener(function(val) {
+  document.getElementById('timeF').innerHTML = ((Math.floor((document.getElementById('playerF').currentTime -document.getElementById('playerF').currentTime%.1)*1000))/1000).toFixed(1);
+;
+  slowedCodeF()
+
+});
+	document.getElementById('playerF').play();
+	document.getElementById('timeF').innerHTML = (document.getElementById('playerF').currentTime - document.getElementById('playerF').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerF').duration -document.getElementById('playerF').duration%.1)*1000))/1000;;
+	F.b = document.getElementById('playerF').currentTime - document.getElementById('playerC').currentTime%.1;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function VolumeUpFunctionG() {
+	document.getElementById('playerG').volume = ((Math.floor((document.getElementById('playerG').volume + 0.1)*1000))/1000).toFixed(2);
+	document.getElementById('volumeG').innerHTML = document.getElementById('playerG').volume;
+	if (document.getElementById('volumeG').innerHTML == 1){
+		document.getElementById('volumeG').innerHTML = "1.0"
+	}
+}
+function VolumeDownFunctionG() {
+	document.getElementById('playerG').volume = ((Math.floor((document.getElementById('playerG').volume - 0.1)*1000))/1000).toFixed(2); 
+	
+	document.getElementById('volumeG').innerHTML = document.getElementById('playerG').volume;
+}
+
+function PauseFunctionG() {
+	document.getElementById('playerG').pause();
+	document.getElementById('timeG').innerHTML = (document.getElementById('playerG').currentTime - document.getElementById('playerG').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000;
+}
+
+
+
+
+
+
+G.b = 42;
+
+
+
+
+async function slowedCodeG() {
+    document.getElementById('timeG').innerHTML = ((Math.floor((document.getElementById('playerG').currentTime -document.getElementById('playerG').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000
+
+    await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
+    G.b = (Math.floor((document.getElementById('playerG').currentTime -document.getElementById('playerG').currentTime%.1)*1000))/1000
+
+}
+
+
+
+function PlayFunctionG() {
+G = {
+  bInternal: 10,
+  bListener: function(val) {},
+  set b(val) {
+    this.bInternal = val;
+    this.bListener(val);
+  },
+  get b() {
+    return this.bInternal;
+  },
+  registerListener: function(listener) {
+    this.bListener = listener;
+  }
+}
+G.registerListener(function(val) {
+  document.getElementById('timeG').innerHTML = ((Math.floor((document.getElementById('playerG').currentTime -document.getElementById('playerG').currentTime%.1)*1000))/1000).toFixed(1);
+;
+  slowedCodeG()
+
+});
+	document.getElementById('playerG').play();
+	document.getElementById('timeG').innerHTML = (document.getElementById('playerG').currentTime - document.getElementById('playerG').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000;;
+	G.b = document.getElementById('playerG').currentTime - document.getElementById('playerC').currentTime%.1;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function VolumeUpFunctionH() {
+	document.getElementById('playerH').volume = ((Math.floor((document.getElementById('playerH').volume + 0.1)*1000))/1000).toFixed(2);
+	document.getElementById('volumeH').innerHTML = document.getElementById('playerH').volume;
+	if (document.getElementById('volumeH').innerHTML == 1){
+		document.getElementById('volumeH').innerHTML = "1.0"
+	}
+}
+function VolumeDownFunctionH() {
+	document.getElementById('playerH').volume = ((Math.floor((document.getElementById('playerH').volume - 0.1)*1000))/1000).toFixed(2); 
+	
+	document.getElementById('volumeH').innerHTML = document.getElementById('playerH').volume;
+}
+
+function PauseFunctionH() {
+	document.getElementById('playerH').pause();
+	document.getElementById('timeH').innerHTML = (document.getElementById('playerH').currentTime - document.getElementById('playerH').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000;
+}
+
+
+
+
+
+
+H.b = 42;
+
+
+
+
+async function slowedCodeH() {
+    document.getElementById('timeH').innerHTML = ((Math.floor((document.getElementById('playerH').currentTime -document.getElementById('playerH').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000
+
+    await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
+    H.b = (Math.floor((document.getElementById('playerH').currentTime -document.getElementById('playerH').currentTime%.1)*1000))/1000
+
+}
+
+
+
+function PlayFunctionH() {
+H = {
+  bInternal: 10,
+  bListener: function(val) {},
+  set b(val) {
+    this.bInternal = val;
+    this.bListener(val);
+  },
+  get b() {
+    return this.bInternal;
+  },
+  registerListener: function(listener) {
+    this.bListener = listener;
+  }
+}
+H.registerListener(function(val) {
+  document.getElementById('timeH').innerHTML = ((Math.floor((document.getElementById('playerH').currentTime -document.getElementById('playerH').currentTime%.1)*1000))/1000).toFixed(1);
+;
+  slowedCodeH()
+
+});
+	document.getElementById('playerH').play();
+	document.getElementById('timeH').innerHTML = (document.getElementById('playerH').currentTime - document.getElementById('playerH').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000;;
+	H.b = document.getElementById('playerH').currentTime - document.getElementById('playerC').currentTime%.1;
+}
 </script>
 <body>
 <div id="box"></div>
@@ -408,69 +746,144 @@ c.registerListener(function(val) {
 			<h2>
 			<p style="font-size: 15px;"> turn them all on for maximum sensory overload :3 </p>
 			</h2>
- 
-			<audio controls>
-				<source src="../sfx/Classic slot machine sound - soundtrack by slotsound.com [BfHjTDR9Lio].mp3" type="audio/mpeg">
-			</audio> <br> 
-			<audio controls>
-				<source src="../sfx/Gambling Casino Sound Effects ⧸ All Jackpot Winning Sounds ⧸ Best Las Vegas Casino Gambling Sounds [WKuLKUIrII4].mp3" type="audio/mpeg">
-			</audio> <br> 
-			<audio controls>
-				<source src="../sfx/Slot Machine Sound Effects Kit [ecp84TWYyV0].mp3" type="audio/mpeg">
-			</audio> <br> 
-			<audio controls>
-				<source src="../sfx/WMS CPU-NXT 3 slot machines generic win soundtrack pack [Q949tP9yO4M].mp3" type="audio/mpeg">
-			</audio> <br> 
-			<audio controls>
-				<source src="../sfx/🎵Aristocrat Technologies Slot Machines Soundtrack - Big Win [xw9NVRfJkZ4].mp3" type="audio/mpeg">
-			</audio> <br> 
-			<audio controls>
-				<source src="../sfx/🎵WMS G+ Deluxe Slot Machines Soundtrack - Mega Big Win [t1ELUU-LdQQ].mp3" type="audio/mpeg">
-			</audio> <br> 
+
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> kaching sfx </p>
+					<audio id="player" src="../sfx/Cash Register Sound Effect [ZeET7Z1ZGlw].mp3"></audio>
+					<div> 
+						<button class="button"  onclick="PlayFunction()">Play</button>
+						<a id="time" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunction()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunction()">Vol +</button> 
+						<a id="volume" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunction()">Vol -</button> 
+					</div>
+				</th>
+			</table>
 			
-			<audio id="player" src="../sfx/Cash Register Sound Effect [ZeET7Z1ZGlw].mp3"></audio>
-			<div> 
-				<button class="button" style="margin-left:10px;" onclick="PlayFunction()">Play</button>
-				<a id="time" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="PauseFunction()">Pause</button> 
-				<button class="button" style="margin-left:40px;" onclick="VolumeUpFunction()">Vol +</button> 
-				<a id="volume" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="VolumeDownFunction()">Vol -</button> 
-			</div>
-			
-			
-			<audio id="playerA" src="../sfx/Casino Jackpot - Sound Effect [hrmdd76WPzQ].mp3"></audio>
-			<div> 
-				<button class="button" style="margin-left:10px;" onclick="PlayFunctionA()">Play</button>
-				<a id="timeA" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="PauseFunctionA()">Pause</button> 
-				<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionA()">Vol +</button> 
-				<a id="volumeA" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionA()">Vol -</button> 
-			</div>
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> YEAH BABY THATS WHAT IM <br>WAITING FOR THATS WHAT <br>ITS ALL ABOUT</p>
+					<audio id="playerA" src="../sfx/Casino Jackpot - Sound Effect [hrmdd76WPzQ].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionA()">Play</button>
+						<a id="timeA" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionA()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionA()">Vol +</button> 
+						<a id="volumeA" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionA()">Vol -</button> 
+					</div>
+				</th>
+			</table>
 			
 			
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> i have no idea how to describe </p>
+					<audio id="playerB" src="../sfx/120 Essential Casino & Gambling Sound FX [Znwz6tfIxnc].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionB()">Play</button>
+						<a id="timeB" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionB()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionB()">Vol +</button> 
+						<a id="volumeB" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionB()">Vol -</button> 
+					</div>
+				</th>
+			</table>
 			
-			<audio id="playerB" src="../sfx/120 Essential Casino & Gambling Sound FX [Znwz6tfIxnc].mp3"></audio>
-			<div> 
-				<button class="button" style="margin-left:10px;" onclick="PlayFunctionB()">Play</button>
-				<a id="timeB" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="PauseFunctionB()">Pause</button> 
-				<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionB()">Vol +</button> 
-				<a id="volumeB" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionB()">Vol -</button> 
-			</div>
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> gambling game but its a mp3</p>
+					<audio id="playerC" src="../sfx/Classic fruits slot machine sound - soundtrack by slotsound.com [55r-UpnYUm4].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionC()">Play</button>
+						<a id="timeC" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionC()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionC()">Vol +</button> 
+						<a id="volumeC" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionC()">Vol -</button> 
+					</div>
+				</th>
+			</table>
+			
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> several </p>
+					<audio id="playerD" src="../sfx/Gambling Casino Sound Effects ⧸ All Jackpot Winning Sounds ⧸ Best Las Vegas Casino Gambling Sounds [WKuLKUIrII4].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionD()">Play</button>
+						<a id="timeD" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionD()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionD()">Vol +</button> 
+						<a id="volumeD" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionD()">Vol -</button> 
+					</div>
+				</th>
+			</table>
+			
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> test your luck !!</p>
+					<audio id="playerE" src="../sfx/Slot Machine Sound Effects Kit [ecp84TWYyV0].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionE()">Play</button>
+						<a id="timeE" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionE()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionE()">Vol +</button> 
+						<a id="volumeE" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionE()">Vol -</button> 
+					</div>
+				</th>
+			</table>
+
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> nine minutes of sounds  </p>
+					<audio id="playerF" src="../sfx/WMS CPU-NXT 3 slot machines generic win soundtrack pack [Q949tP9yO4M].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionF()">Play</button>
+						<a id="timeF" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionF()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionF()">Vol +</button> 
+						<a id="volumeF" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionF()">Vol -</button> 
+					</div>
+				</th>
+			</table>
+
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> you haveth woneth !! </p>
+					<audio id="playerG" src="../sfx/🎵Aristocrat Technologies Slot Machines Soundtrack - Big Win [xw9NVRfJkZ4].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionG()">Play</button>
+						<a id="timeG" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionG()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionG()">Vol +</button> 
+						<a id="volumeG" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionG()">Vol -</button> 
+					</div>
+				</th>
+			</table>
+
+			<table class="player" style="margin-left:10px;">
+				<th>
+					<p> tbh they did not have to go THIS hard</p>
+					<audio id="playerH" src="../sfx/🎵WMS G+ Deluxe Slot Machines Soundtrack - Mega Big Win [t1ELUU-LdQQ].mp3"></audio>
+					<div> 
+						<button class="button" style="margin-left:10px;" onclick="PlayFunctionH()">Play</button>
+						<a id="timeH" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionH()">Pause</button> 
+						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionH()">Vol +</button> 
+						<a id="volumeH" style="margin-right:-10px;"> </a>
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionH()">Vol -</button> 
+					</div>
+				</th>
+			</table>
 			
 			
-			<audio id="playerC" src="../sfx/Classic fruits slot machine sound - soundtrack by slotsound.com [55r-UpnYUm4].mp3"></audio>
-			<div> 
-				<button class="button" style="margin-left:10px;" onclick="PlayFunctionC()">Play</button>
-				<a id="timeC" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="PauseFunctionC()">Pause</button> 
-				<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionC()">Vol +</button> 
-				<a id="volumeC" style="margin-right:-10px;"> </a>
-				<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionC()">Vol -</button> 
-			</div>
 			</th>
 		</tr>
 	</table>
