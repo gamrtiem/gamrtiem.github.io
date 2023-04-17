@@ -35,6 +35,25 @@ window.onload = function () {
 	document.getElementById('timeG').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000
 	document.getElementById('volumeH').innerHTML = "1.0"
 	document.getElementById('timeH').innerHTML = "0.0/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000
+	loop = 0
+	check = 1
+	loopA = 0
+	checkA = 1
+	loopB = 0
+	checkB = 1
+	loopC = 0
+	checkC = 1
+	loopD = 0
+	checkD = 1
+	loopE = 0
+	checkE = 1
+	loopF = 0
+	checkF = 1
+	loopG = 0
+	checkG = 1
+	loopH = 0
+	checkH = 1
+	
 }
 onmousemove = function(e){
 	function mouse1(){
@@ -168,7 +187,7 @@ x.registerListener(function(val) {
 
 x.a = 42;
 
-
+loop = 0;
 
 
 
@@ -179,6 +198,12 @@ function timeout(ms) {
 async function slowedCode() {
     document.getElementById('time').innerHTML = ((Math.floor((document.getElementById('player').currentTime -document.getElementById('player').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('player').duration -document.getElementById('player').duration%.1)*1000))/1000
 
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('player').currentTime -document.getElementById('player').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('player').duration -document.getElementById('player').duration%.1)*1000))/1000){
+			document.getElementById('player').currentTime = 0.0;
+			document.getElementById('player').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     x.a = (Math.floor((document.getElementById('player').currentTime -document.getElementById('player').currentTime%.1)*1000))/1000
 
@@ -222,7 +247,15 @@ y.b = 42;
 
 async function slowedCodeA() {
     document.getElementById('timeA').innerHTML = ((Math.floor((document.getElementById('playerA').currentTime -document.getElementById('playerA').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerA').duration -document.getElementById('playerA').duration%.1)*1000))/1000
-
+	
+	
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerA').currentTime -document.getElementById('playerA').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerA').duration -document.getElementById('playerA').duration%.1)*1000))/1000){
+			document.getElementById('playerA').currentTime = 0.0;
+			document.getElementById('playerA').play();
+		}
+	}
+	
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     y.b = (Math.floor((document.getElementById('playerA').currentTime -document.getElementById('playerA').currentTime%.1)*1000))/1000
 
@@ -293,6 +326,12 @@ b.b = 42;
 async function slowedCodeB() {
     document.getElementById('timeB').innerHTML = ((Math.floor((document.getElementById('playerB').currentTime -document.getElementById('playerB').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerB').duration -document.getElementById('playerB').duration%.1)*1000))/1000
 
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerB').currentTime -document.getElementById('playerB').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerB').duration -document.getElementById('playerB').duration%.1)*1000))/1000){
+			document.getElementById('playerB').currentTime = 0.0;
+			document.getElementById('playerB').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     b.b = (Math.floor((document.getElementById('playerB').currentTime -document.getElementById('playerB').currentTime%.1)*1000))/1000
 
@@ -360,7 +399,13 @@ c.b = 42;
 
 async function slowedCodeC() {
     document.getElementById('timeC').innerHTML = ((Math.floor((document.getElementById('playerC').currentTime -document.getElementById('playerC').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerC').duration -document.getElementById('playerC').duration%.1)*1000))/1000
-
+	
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerC').currentTime -document.getElementById('playerC').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerC').duration -document.getElementById('playerC').duration%.1)*1000))/1000){
+			document.getElementById('playerC').currentTime = 0.0;
+			document.getElementById('playerC').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     c.b = (Math.floor((document.getElementById('playerC').currentTime -document.getElementById('playerC').currentTime%.1)*1000))/1000
 
@@ -428,6 +473,12 @@ D.b = 42;
 async function slowedCodeD() {
     document.getElementById('timeD').innerHTML = ((Math.floor((document.getElementById('playerD').currentTime -document.getElementById('playerD').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerD').duration -document.getElementById('playerD').duration%.1)*1000))/1000
 
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerD').currentTime -document.getElementById('playerD').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerD').duration -document.getElementById('playerD').duration%.1)*1000))/1000){
+			document.getElementById('playerD').currentTime = 0.0;
+			document.getElementById('playerD').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     D.b = (Math.floor((document.getElementById('playerD').currentTime -document.getElementById('playerD').currentTime%.1)*1000))/1000
 
@@ -494,6 +545,13 @@ E.b = 42;
 async function slowedCodeE() {
     document.getElementById('timeE').innerHTML = ((Math.floor((document.getElementById('playerE').currentTime -document.getElementById('playerE').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerE').duration -document.getElementById('playerE').duration%.1)*1000))/1000
 
+
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerE').currentTime -document.getElementById('playerE').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerE').duration -document.getElementById('playerE').duration%.1)*1000))/1000){
+			document.getElementById('playerE').currentTime = 0.0;
+			document.getElementById('playerE').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     E.b = (Math.floor((document.getElementById('playerE').currentTime -document.getElementById('playerE').currentTime%.1)*1000))/1000
 
@@ -559,6 +617,12 @@ F.b = 42;
 async function slowedCodeF() {
     document.getElementById('timeF').innerHTML = ((Math.floor((document.getElementById('playerF').currentTime -document.getElementById('playerF').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerF').duration -document.getElementById('playerF').duration%.1)*1000))/1000
 
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerF').currentTime -document.getElementById('playerF').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerF').duration -document.getElementById('playerF').duration%.1)*1000))/1000){
+			document.getElementById('playerF').currentTime = 0.0;
+			document.getElementById('playerF').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     F.b = (Math.floor((document.getElementById('playerF').currentTime -document.getElementById('playerF').currentTime%.1)*1000))/1000
 
@@ -624,6 +688,12 @@ G.b = 42;
 async function slowedCodeG() {
     document.getElementById('timeG').innerHTML = ((Math.floor((document.getElementById('playerG').currentTime -document.getElementById('playerG').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000
 
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerG').currentTime -document.getElementById('playerG').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerG').duration -document.getElementById('playerG').duration%.1)*1000))/1000){
+			document.getElementById('playerG').currentTime = 0.0;
+			document.getElementById('playerG').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     G.b = (Math.floor((document.getElementById('playerG').currentTime -document.getElementById('playerG').currentTime%.1)*1000))/1000
 
@@ -689,6 +759,12 @@ H.b = 42;
 async function slowedCodeH() {
     document.getElementById('timeH').innerHTML = ((Math.floor((document.getElementById('playerH').currentTime -document.getElementById('playerH').currentTime%.1)*1000))/1000).toFixed(1) + "/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000
 
+	if (loop == 1){
+		if((((Math.floor((document.getElementById('playerH').currentTime -document.getElementById('playerH').currentTime%.1)*1000))/1000).toFixed(1)) == (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000){
+			document.getElementById('playerH').currentTime = 0.0;
+			document.getElementById('playerH').play();
+		}
+	}
     await this.timeout(100) // Wait random amount of time between [0.5, 2.5] seconds
     H.b = (Math.floor((document.getElementById('playerH').currentTime -document.getElementById('playerH').currentTime%.1)*1000))/1000
 
@@ -718,8 +794,170 @@ H.registerListener(function(val) {
 
 });
 	document.getElementById('playerH').play();
-	document.getElementById('timeH').innerHTML = (document.getElementById('playerH').currentTime - document.getElementById('playerH').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000;;
+	document.getElementById('timeH').innerHTML = (document.getElementById('playerH').currentTime - document.getElementById('playerH').currentTime%.1).toFixed(1) + "/" + (Math.floor((document.getElementById('playerH').duration -document.getElementById('playerH').duration%.1)*1000))/1000;
 	H.b = document.getElementById('playerH').currentTime - document.getElementById('playerC').currentTime%.1;
+}
+
+
+
+function LoopFunction(){
+	if (loop == 0 & check == 1){
+		loop = 1
+		check = 0
+		document.getElementById('loop').innerHTML = ""
+		document.getElementById('loop2').innerHTML = "looping"
+	}
+	if (loop == 1 & check == 1){
+		loop = 0
+		check = 0
+		document.getElementById('loop2').innerHTML = ""
+		document.getElementById('loop').innerHTML = "loop"
+	}
+	check = 1
+}
+function LoopFunctionA(){
+	if (loopA == 0 & checkA == 1){
+		loopA = 1
+		checkA = 0
+		document.getElementById('loopA').innerHTML = ""
+		document.getElementById('loop2A').innerHTML = "looping"
+	}
+	if (loopA == 1 & checkA == 1){
+		loopA = 0
+		checkA = 0
+		document.getElementById('loop2A').innerHTML = ""
+		document.getElementById('loopA').innerHTML = "loop"
+	}
+	checkA = 1
+}
+function LoopFunctionB(){
+	if (loopB == 0 & checkB == 1){
+		loopB = 1
+		checkB = 0
+		document.getElementById('loopB').innerHTML = ""
+		document.getElementById('loop2B').innerHTML = "looping"
+	}
+	if (loopB == 1 & checkB == 1){
+		loopB = 0
+		checkB = 0
+		document.getElementById('loop2B').innerHTML = ""
+		document.getElementById('loopB').innerHTML = "loop"
+	}
+	checkB = 1
+}
+function LoopFunctionC(){
+	if (loopC == 0 & checkC == 1){
+		loopC = 1
+		checkC = 0
+		document.getElementById('loopC').innerHTML = ""
+		document.getElementById('loop2C').innerHTML = "looping"
+	}
+	if (loopC == 1 & checkC == 1){
+		loopC = 0
+		checkC = 0
+		document.getElementById('loop2C').innerHTML = ""
+		document.getElementById('loopC').innerHTML = "loop"
+	}
+	checkC = 1
+}
+
+function LoopFunctionD(){
+	if (loopD == 0 & checkD == 1){
+		loopD = 1
+		checkD = 0
+		document.getElementById('loopD').innerHTML = ""
+		document.getElementById('loop2D').innerHTML = "looping"
+	}
+	if (loopD == 1 & checkD == 1){
+		loopD = 0
+		checkD = 0
+		document.getElementById('loop2D').innerHTML = ""
+		document.getElementById('loopD').innerHTML = "loop"
+	}
+	checkD = 1
+}
+function LoopFunctionE(){
+	if (loopE == 0 & checkE == 1){
+		loopE = 1
+		checkE = 0
+		document.getElementById('loopE').innerHTML = ""
+		document.getElementById('loop2E').innerHTML = "looping"
+	}
+	if (loopE == 1 & checkE == 1){
+		loopE = 0
+		checkE = 0
+		document.getElementById('loop2E').innerHTML = ""
+		document.getElementById('loopE').innerHTML = "loop"
+	}
+	checkE = 1
+}
+function LoopFunctionF(){
+	if (loopF == 0 & checkF == 1){
+		loopF = 1
+		checkF = 0
+		document.getElementById('loopF').innerHTML = ""
+		document.getElementById('loop2F').innerHTML = "looping"
+	}
+	if (loopF == 1 & checkF == 1){
+		loopF = 0
+		checkF = 0
+		document.getElementById('loop2F').innerHTML = ""
+		document.getElementById('loopF').innerHTML = "loop"
+	}
+	checkF = 1
+}
+function LoopFunctionG(){
+	if (loopG == 0 & checkG == 1){
+		loopG = 1
+		checkG = 0
+		document.getElementById('loopG').innerHTML = ""
+		document.getElementById('loop2G').innerHTML = "looping"
+	}
+	if (loopG == 1 & checkG == 1){
+		loopG = 0
+		checkG = 0
+		document.getElementById('loop2G').innerHTML = ""
+		document.getElementById('loopG').innerHTML = "loop"
+	}
+	checkG = 1
+}
+function LoopFunctionH(){
+	if (loopH == 0 & checkH == 1){
+		loopH = 1
+		checkH = 0
+		document.getElementById('loopH').innerHTML = ""
+		document.getElementById('loop2H').innerHTML = "looping"
+	}
+	if (loopH == 1 & checkH == 1){
+		loopH = 0
+		checkH = 0
+		document.getElementById('loop2H').innerHTML = ""
+		document.getElementById('loopH').innerHTML = "loop"
+	}
+	checkH = 1
+}
+
+function PlayAllFunction() {
+	PlayFunction();
+	PlayFunctionA();
+	PlayFunctionB();
+	PlayFunctionC();
+	PlayFunctionD();
+	PlayFunctionE();
+	PlayFunctionF();
+	PlayFunctionG();
+	PlayFunctionH();
+}
+function LoopAllFunction() {
+	LoopFunction();
+	LoopFunctionA();
+	LoopFunctionB();
+	LoopFunctionC();
+	LoopFunctionD();
+	LoopFunctionE();
+	LoopFunctionF();
+	LoopFunctionG();
+	LoopFunctionH();
 }
 </script>
 <body>
@@ -746,6 +984,8 @@ H.registerListener(function(val) {
 			<h2>
 			<p style="font-size: 15px;"> turn them all on for maximum sensory overload :3 </p>
 			</h2>
+			<button class="button" onclick="PlayAllFunction()" style="margin-bottom:10px; margin-left:10px;"> play all </button>
+			<button class="button" onclick="LoopAllFunction()"> loop all </button>
 
 			<table class="player" style="margin-left:10px;">
 				<th>
@@ -755,7 +995,8 @@ H.registerListener(function(val) {
 						<button class="button"  onclick="PlayFunction()">Play</button>
 						<a id="time" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunction()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunction()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunction()"><p id="loop" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunction()">Vol +</button> 
 						<a id="volume" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunction()">Vol -</button> 
 					</div>
@@ -770,7 +1011,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionA()">Play</button>
 						<a id="timeA" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionA()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionA()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionA()"><p id="loopA" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2A"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionA()">Vol +</button> 
 						<a id="volumeA" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionA()">Vol -</button> 
 					</div>
@@ -786,7 +1028,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionB()">Play</button>
 						<a id="timeB" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionB()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionB()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionB()"><p id="loopB" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2B"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionB()">Vol +</button> 
 						<a id="volumeB" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionB()">Vol -</button> 
 					</div>
@@ -801,7 +1044,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionC()">Play</button>
 						<a id="timeC" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionC()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionC()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionC()"><p id="loopC" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2C"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionC()">Vol +</button> 
 						<a id="volumeC" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionC()">Vol -</button> 
 					</div>
@@ -816,7 +1060,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionD()">Play</button>
 						<a id="timeD" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionD()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionD()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionD()"><p id="loopD" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2D"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionD()">Vol +</button> 
 						<a id="volumeD" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionD()">Vol -</button> 
 					</div>
@@ -831,7 +1076,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionE()">Play</button>
 						<a id="timeE" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionE()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionE()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionE()"><p id="loopE" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2E"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionE()">Vol +</button> 
 						<a id="volumeE" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionE()">Vol -</button> 
 					</div>
@@ -846,7 +1092,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionF()">Play</button>
 						<a id="timeF" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionF()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionF()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionF()"><p id="loopF" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2F"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionF()">Vol +</button> 
 						<a id="volumeF" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionF()">Vol -</button> 
 					</div>
@@ -861,7 +1108,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionG()">Play</button>
 						<a id="timeG" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionG()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionG()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionG()"><p id="loopG" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2G"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionG()">Vol +</button> 
 						<a id="volumeG" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionG()">Vol -</button> 
 					</div>
@@ -876,7 +1124,8 @@ H.registerListener(function(val) {
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionH()">Play</button>
 						<a id="timeH" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="PauseFunctionH()">Pause</button> 
-						<button class="button" style="margin-left:40px;" onclick="VolumeUpFunctionH()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="LoopFunctionH()"><p id="loopH" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2H"></a></button>
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionH()">Vol +</button> 
 						<a id="volumeH" style="margin-right:-10px;"> </a>
 						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionH()">Vol -</button> 
 					</div>
