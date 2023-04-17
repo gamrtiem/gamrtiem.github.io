@@ -970,6 +970,28 @@ function PauseAllFunction() {
 	PauseFunctionG();
 	PauseFunctionH();
 }
+function TurnDownAllFunction() {
+	VolumeDownFunction();
+	VolumeDownFunctionA();
+	VolumeDownFunctionB();
+	VolumeDownFunctionC();
+	VolumeDownFunctionD();
+	VolumeDownFunctionE();
+	VolumeDownFunctionF();
+	VolumeDownFunctionG();
+	VolumeDownFunctionH();
+}
+function TurnUpAllFunction() {
+	VolumeUpFunction();
+	VolumeUpFunctionA();
+	VolumeUpFunctionB();
+	VolumeUpFunctionC();
+	VolumeUpFunctionD();
+	VolumeUpFunctionE();
+	VolumeUpFunctionF();
+	VolumeUpFunctionG();
+	VolumeUpFunctionH();
+}
 </script>
 <body>
 <div id="box"></div>
@@ -997,9 +1019,14 @@ function PauseAllFunction() {
 			</h2>
 			<button class="button" onclick="PlayAllFunction()" style="margin-bottom:10px; margin-left:10px;"> play all (will be loud. like actually turn your volume down !!) </button>
 			<button class="button" onclick="PauseAllFunction()" style="margin-bottom:10px;"> pause all </button>
-			
-			
 			<button class="button" onclick="LoopAllFunction()"> loop all </button>
+			<button class="button" onclick="TurnDownAllFunction()" style="margin-bottom:10px;"> turn down all </button>
+			<button class="button" onclick="TurnUpAllFunction()" style="margin-bottom:10px;"> turn up all </button>
+			
+			
+			
+			
+			
 
 			<table class="player" style="margin-left:10px;">
 				<th>
