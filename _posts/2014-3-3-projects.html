@@ -121,8 +121,28 @@ function slowFunction() {
 	r.style.setProperty('--sped', x );
 	document.getElementById('demo').innerHTML = ""
 }
-document.cookie = "projects";
+
+// Build the expiration date string:
+var expiration_date = new Date();
+var cookie_string = '';
+expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+// Build the set-cookie string:
+cookie_string = "projects; path=/; expires=" + expiration_date.toUTCString();
+// Create or update the cookie:
+document.cookie = cookie_string;
+
+////////////////////////////////
+function listCookies() {
+    var theCookies = document.cookie.split(';');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        aString += i + ' ' + theCookies[i-1] + "\n";
+    }
+    return aString;
+}
+
 console.log(document.cookie);
+console.log(listCookies());
 </script>
 <body>
 <div id="box"></div>
