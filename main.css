@@ -25,6 +25,10 @@
   --mouseposy4: -91px;
   --mouseposx5: -91px;
   --mouseposy5: -91px;
+  --reward: "audio jungle";
+  --RibbonAnimation: 1;
+  --RibbonRandomX: 1;
+  --RibbonRandomY: -1;
 }
 .scroller {
   overflow-y: scroll;
@@ -103,6 +107,14 @@ border:1px solid red;
 #demo {
 	color:red;
 }
+#ribbon {
+	height:50px; 
+	width:50px; 
+	position:relative; 
+	top:80px; 
+	left:-47%;
+}
+
 
 
 
@@ -182,6 +194,10 @@ to {transform: rotateY(var(--spin));}
   50%  {border: var(--size) solid blue;}
   75%  {border: var(--size) solid green; }
   100% {border: var(--size) solid red;}
+}
+@keyframes taunt {
+  0%   {transform: matrix(1, var(--RibbonRandomX), var(--RibbonRandomY), 1, 1, 1);}
+  100% {transform: matrix(1, var(--RibbonRandomX), var(--RibbonRandomY), 1, 1, 1);}
 }
 /* if the browser window is at least 800px-s wide: */
 @media screen and (min-width: 0px) {

@@ -9,6 +9,53 @@ aboutcheck = 0
 gamblingcheck = 0
 projectscheck = 0
 
+// Build the expiration date string:
+var expiration_date = new Date();
+var cookie_string = '';
+expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+// Build the set-cookie string:
+cookie_string = "home=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+// Create or update the cookie:
+document.cookie = cookie_string;
+
+////////////////////////////////
+function listCookies() {
+    var theCookies = document.cookie.split(';');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        aString += i + ' ' + theCookies[i-1] + "\n";
+		if (theCookies[i-1] == "about=1" || theCookies[i-1] == " about=1"){
+			aboutcheck = 1
+		}
+		if (theCookies[i-1] == "home=1" || theCookies[i-1] == " home=1"){
+			homecheck = 1
+		}
+		if (theCookies[i-1] == "gambling=1" || theCookies[i-1] == " gambling=1"){
+			gamblingcheck = 1
+		}
+		if (theCookies[i-1] == "projects=1" || theCookies[i-1] == " projects=1"){
+			projectscheck = 1
+		}
+    }
+    return aString;
+}
+
+console.log(document.cookie);
+console.log(listCookies());
+
+function CheckFunction(){
+if (aboutcheck == 1 && projectscheck == 1 && homecheck == 1 && gamblingcheck == 1) {
+
+}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 window.onresize = function() {
@@ -24,6 +71,7 @@ window.onload = function () {
 	var r = document.querySelector(':root');
 	r.style.setProperty('--blue', z);
 	r.style.setProperty('--smallbox', y);
+	CheckFunction()
 }
 onmousemove = function(e){
 	function mouse1(){
@@ -104,44 +152,19 @@ function slowFunction() {
 	r.style.setProperty('--speed', y );
 	r.style.setProperty('--sped', x );
 	document.getElementById('demo').innerHTML = ""
+	
+}
+ribbonclicks = 1
+function RibbonFunction(){
+
+	document.getElementById('ribbon').style.animation = "taunt .5s linear 1";
+	console.log(document.getElementById('ribbon').style.animation);
+	
+}
+function StopRibbon(){
+	document.getElementById('ribbon').style.animation = ""
 }
 
-
-// Build the expiration date string:
-var expiration_date = new Date();
-var cookie_string = '';
-expiration_date.setFullYear(expiration_date.getFullYear() + 1);
-// Build the set-cookie string:
-cookie_string = "home=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
-// Create or update the cookie:
-document.cookie = cookie_string;
-
-////////////////////////////////
-function listCookies() {
-    var theCookies = document.cookie.split(';');
-    var aString = '';
-    for (var i = 1 ; i <= theCookies.length; i++) {
-        aString += i + ' ' + theCookies[i-1] + "\n";
-		if (theCookies[i-1] == "about=1" || theCookies[i-1] == " about=1"){
-			aboutcheck = 1
-			}
-    }
-    return aString;
-}
-
-console.log(document.cookie);
-console.log(listCookies());
-
-
-
-
-
-
-
-if (aboutcheck == 1) {
-	var r = document.querySelector(':root');
-	r.style.setProperty('--size', "1000px");
-}
 </script>
 <body>
 <div id="box"></div>
@@ -152,7 +175,11 @@ if (aboutcheck == 1) {
 	<table class="tabl">
 		<tr>
 			<th style="width:10%; height:var(--smallbox);"><img id="funy" src="../images/bleh.gif"  width=100% height=160px><p id="demo"></p></th>
-			<th style="width:90%; height:var(--smallbox);"><h1>audio jungle</h1></th> 
+			<th style="width:90%; height:var(--smallbox);"><h1 id="reward" style="margin-bottom:-43px;">audio jungle</h1> 
+			<img id="ribbon" onclick="RibbonFunction()" src="images/ribbon.svg"> 
+			
+			</th> 
+			
 		</tr>
 	</table>
 	<table class="tabl2">
@@ -171,6 +198,7 @@ if (aboutcheck == 1) {
 			
 			<a href="https://icebro.party/gambling"> nice and calming gambling sfx to go to sleep to </a>
 			</p>
+			
  				</h2>
 			</th>
 		</tr>
