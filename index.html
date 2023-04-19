@@ -4,6 +4,13 @@
 <link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
 <script language='javascript'>
 
+homecheck = 0
+aboutcheck = 0
+gamblingcheck = 0
+projectscheck = 0
+
+
+
 window.onresize = function() {
 	let z = (window.innerHeight - 223) + "px";
 	let y = (160) + "px";
@@ -115,12 +122,26 @@ function listCookies() {
     var aString = '';
     for (var i = 1 ; i <= theCookies.length; i++) {
         aString += i + ' ' + theCookies[i-1] + "\n";
+		if (theCookies[i-1] == "about=1" || theCookies[i-1] == " about=1"){
+			aboutcheck = 1
+			}
     }
     return aString;
 }
 
 console.log(document.cookie);
 console.log(listCookies());
+
+
+
+
+
+
+
+if (aboutcheck == 1) {
+	var r = document.querySelector(':root');
+	r.style.setProperty('--size', "1000px");
+}
 </script>
 <body>
 <div id="box"></div>
