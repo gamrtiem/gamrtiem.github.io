@@ -3,6 +3,27 @@
 <link rel="stylesheet" href="../main.css">
 <link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
 <script language='javascript'>
+// Build the expiration date string:
+var expiration_date = new Date();
+var cookie_string = '';
+expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+// Build the set-cookie string:
+cookie_string = "gambling; path=/; expires=" + expiration_date.toUTCString() + "; domain=icebro.party" ;
+// Create or update the cookie:
+document.cookie = cookie_string;
+
+////////////////////////////////
+function listCookies() {
+    var theCookies = document.cookie.split(';');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+        aString += i + ' ' + theCookies[i-1] + "\n";
+    }
+    return aString;
+}
+
+console.log(document.cookie);
+console.log(listCookies());
 
 window.onresize = function() {
 	let z = (window.innerHeight - 223) + "px";
@@ -996,27 +1017,7 @@ function TurnUpAllFunction() {
 
 
 
-// Build the expiration date string:
-var expiration_date = new Date();
-var cookie_string = '';
-expiration_date.setFullYear(expiration_date.getFullYear() + 1);
-// Build the set-cookie string:
-cookie_string = "gambling; path=/; expires=" + expiration_date.toUTCString();
-// Create or update the cookie:
-document.cookie = cookie_string;
 
-////////////////////////////////
-function listCookies() {
-    var theCookies = document.cookie.split(';');
-    var aString = '';
-    for (var i = 1 ; i <= theCookies.length; i++) {
-        aString += i + ' ' + theCookies[i-1] + "\n";
-    }
-    return aString;
-}
-
-console.log(document.cookie);
-console.log(listCookies());
 </script>
 <body>
 <div id="box"></div>

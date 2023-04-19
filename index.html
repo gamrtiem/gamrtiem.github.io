@@ -105,7 +105,7 @@ var expiration_date = new Date();
 var cookie_string = '';
 expiration_date.setFullYear(expiration_date.getFullYear() + 1);
 // Build the set-cookie string:
-cookie_string = "home; path=/; expires=" + expiration_date.toUTCString();
+cookie_string = "home; path=/; expires=" + expiration_date.toUTCString() + "; domain=icebro.party";
 // Create or update the cookie:
 document.cookie = cookie_string;
 
