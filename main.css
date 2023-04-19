@@ -107,7 +107,7 @@ border:1px solid red;
 #demo {
 	color:red;
 }
-#ribbon {
+.ribbon {
 	height:50px; 
 	width:50px; 
 	position:relative; 
@@ -115,6 +115,25 @@ border:1px solid red;
 	left:-47%;
 	animation: taunt .5s linear 1;
 }
+.ribbon_taunt {
+	height:50px; 
+	width:50px; 
+	position:relative; 
+	top:80px; 
+	left:-47%;
+	animation: taunt .5s linear 1;
+}
+
+.ribbon:focus {
+  -webkit-animation: taunt 1s linear 1;
+          animation: taunt 1s linear 1;
+}
+.ribbon:active {
+  -webkit-animation: none;
+          animation: none;
+}
+
+
 
 
 
@@ -197,8 +216,8 @@ to {transform: rotateY(var(--spin));}
   100% {border: var(--size) solid red;}
 }
 @keyframes taunt {
-  0%   {transform: matrix(1, var(--RibbonRandomX), var(--RibbonRandomY), 1, 1, 1);}
-  100% {transform: matrix(1, var(--RibbonRandomX), var(--RibbonRandomY), 1, 1, 1);}
+  0%   {transform: matrix(1, var(--RibbonRandomX), var(--RibbonRandomY), 1, 1, 1); background-image:images/taunt.gif;}
+  100% {transform: matrix(1, var(--RibbonRandomX), var(--RibbonRandomY), 1, 1, 1); background-image:images/taunt.gif;}
 }
 /* if the browser window is at least 800px-s wide: */
 @media screen and (min-width: 0px) {

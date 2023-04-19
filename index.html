@@ -53,26 +53,8 @@ if (aboutcheck == 1 && projectscheck == 1 && homecheck == 1 && gamblingcheck == 
 	
 	
 	
-// retrieve the element
-element = document.getElementById("ribbon");
 
-// reset the transition by...
-element.addEventListener("click", function(e) {
-  e.preventDefault;
-  
-  // -> removing the class
-  element.classList.remove("run-animation");
-  
-  // -> triggering reflow /* The actual magic */
-  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-  // Oops! This won't work in strict mode. Thanks Felis Phasma!
-  // element.offsetWidth = element.offsetWidth;
-  // Do this instead:
-  void element.offsetWidth;
-  
-  // -> and re-adding the class
-  element.classList.add("run-animation");
-}, false);
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -178,13 +160,27 @@ function slowFunction() {
 	document.getElementById('demo').innerHTML = ""
 	
 }
+ribbony = 1
+ribbonx = 1
 //ribbonclicks = 1
-//function RibbonFunction(){
-//
-//	document.getElementById('ribbon').style.animation = "taunt .5s linear 1";
-//	console.log(document.getElementById('ribbon').style.animation);
-//	
-//}
+function RibbonFunction(){
+	var r = document.querySelector(':root');
+	console.log(document.getElementsByClassName('ribbon'));
+	if(Math.random() <= .5){
+		ribbonx = Math.random() * -1 * .5;
+	} else{
+		ribbonx = Math.random() * .5;
+	}
+	if(Math.random() <= .5){
+		ribbony = Math.random() * -1 * .5;
+	} else{
+		ribbony = Math.random() * .5;
+	}
+	
+	console.log(r.style.setProperty('--RibbonRandomX', ribbonx ));
+	console.log(r.style.setProperty('--RibbonRandomY', ribbony ));
+	
+}
 //function StopRibbon(){
 ///	document.getElementById('ribbon').style.animation = ""
 //}
@@ -200,7 +196,7 @@ function slowFunction() {
 		<tr>
 			<th style="width:10%; height:var(--smallbox);"><img id="funy" src="../images/bleh.gif"  width=100% height=160px><p id="demo"></p></th>
 			<th style="width:90%; height:var(--smallbox);"><h1 id="reward" style="margin-bottom:-43px;">audio jungle</h1> 
-			<img id="ribbon"  src="images/ribbon.svg"> 
+			<img class="ribbon" onclick="RibbonFunction()" src="images/ribbon.svg"> 
 			</th> 
 			
 		</tr>
