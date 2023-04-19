@@ -113,6 +113,7 @@ border:1px solid red;
 	position:relative; 
 	top:80px; 
 	left:-47%;
+	animation: RibbonAnimation .5s linear infinite;
 }
 
 
