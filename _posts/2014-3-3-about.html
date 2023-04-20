@@ -89,7 +89,7 @@ function RibbonFunction(){
 
 
 window.onresize = function() {
-	CheckFunction()
+
 	let z = (window.innerHeight - 223) + "px";
 	let y = (160) + "px";
 	var r = document.querySelector(':root');
@@ -97,6 +97,7 @@ window.onresize = function() {
 	r.style.setProperty('--smallbox', y);
 }
 window.onload = function () {
+	CheckFunction()
 	let z = (window.innerHeight - 223) + "px";
 	let y = (160) + "px";
 	var r = document.querySelector(':root');
