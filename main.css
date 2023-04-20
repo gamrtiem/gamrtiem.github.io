@@ -29,6 +29,7 @@
   --RibbonAnimation: 1;
   --RibbonRandomX: 1;
   --RibbonRandomY: -1;
+  --RibbonSize: 0px;
 }
 .scroller {
   overflow-y: scroll;
@@ -108,12 +109,13 @@ border:1px solid red;
 	color:red;
 }
 .ribbon {
-	height:50px; 
-	width:50px; 
+	height: var(--RibbonSize); 
+	width:var(--RibbonSize); 
 	position:relative; 
 	top:80px; 
 	left:-47%;
 	animation: taunt .5s linear 1;
+	background-image: https://icebro.party/images/bleh.gif;
 }
 .ribbon_taunt {
 	height:50px; 
@@ -122,6 +124,7 @@ border:1px solid red;
 	top:80px; 
 	left:-47%;
 	animation: taunt .5s linear 1;
+
 }
 
 .ribbon:focus {
