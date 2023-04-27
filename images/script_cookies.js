@@ -8,7 +8,7 @@ var expiration_date = new Date();
 var cookie_string = '';
 expiration_date.setFullYear(expiration_date.getFullYear() + 1);
 // Build the set-cookie string:
-cookie_string = "gambling=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+
 // Create or update the cookie:
 document.cookie = cookie_string;
 
