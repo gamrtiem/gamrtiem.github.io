@@ -75,7 +75,11 @@ body {
 	
 
 }
-
+p {
+	padding-left: 20px;
+	color:white;
+	font-family: "determination";
+}
 /*table.tabl {
 	
 	height: 204px;
