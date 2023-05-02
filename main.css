@@ -286,6 +286,7 @@ to {transform: rotateY(var(--spin));}
 a {
 	color: #F3D2F7;
 	text-decoration: none;
+	 font-weight: 10;
 }
 
 ::-moz-selection { /* Code for Firefox */
