@@ -46,7 +46,7 @@
 }
 h1 {
 	padding-left: 20px;
-	font-size: 100%;
+	font-size: 50%;
 	font-family: "determination";
 	color: white;
 	
@@ -57,7 +57,7 @@ h2{
 	color: white;
 }
 para {
-	font-size: 100%;
+	font-size: 50%;
 	font-family: "determination";
 }
 html{
