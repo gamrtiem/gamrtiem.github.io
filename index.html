@@ -70,7 +70,7 @@ if (aboutcheck == 1 && projectscheck == 1 && homecheck == 1 && gamblingcheck == 
 
 
 window.onresize = function() {
-	let z = (window.innerHeight - 223) + "px";
+	let z = (window.innerHeight - window.innerWidth/10) + "px";
 	let x = (window.innerWidth/10) + "px";
 	let y = (160) + "px";
 	var r = document.querySelector(':root');
@@ -212,7 +212,7 @@ function RibbonFunction(){
 	</table>
 	<table class="tabl2">
 		<tr>
-			<th style="width:9.97%;text-align:left;box-sizing: content-box; ">
+			<th style="width:var(--widthbutawesome);text-align:left;box-sizing: content-box; ">
 			<a href="https://icebro.party/">home</h1> <br> <br> <br> <br> 
 			<a href="https://icebro.party/about">about me </h1> <br> <br>  <br> <br> 		
 			<a href="https://icebro.party/blog">blog</h1> <br> <br> <br> <br> 
