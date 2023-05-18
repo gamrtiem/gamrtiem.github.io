@@ -30,6 +30,7 @@
   --RibbonRandomX: 1;
   --RibbonRandomY: -1;
   --RibbonSize: 0px;
+  --widthbutepic: 0px;
 }
 .scroller {
   overflow-y: scroll;
