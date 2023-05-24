@@ -1,234 +1,45 @@
 <!DOCTYPE html>
-<title>the true and neo website</title>
-<link rel="stylesheet" href="main.css">
-<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
-<script language='javascript'>
-
-homecheck = 0
-aboutcheck = 0
-gamblingcheck = 0
-projectscheck = 0
-
-// Build the expiration date string:
-var expiration_date = new Date();
-var cookie_string = '';
-expiration_date.setFullYear(expiration_date.getFullYear() + 1);
-// Build the set-cookie string:
-cookie_string = "home=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
-// Create or update the cookie:
-document.cookie = cookie_string;
-
-////////////////////////////////
-function listCookies() {
-    var theCookies = document.cookie.split(';');
-    var aString = '';
-    for (var i = 1 ; i <= theCookies.length; i++) {
-        aString += i + ' ' + theCookies[i-1] + "\n";
-		if (theCookies[i-1] == "about=1" || theCookies[i-1] == " about=1"){
-			aboutcheck = 1
-		}
-		if (theCookies[i-1] == "home=1" || theCookies[i-1] == " home=1"){
-			homecheck = 1
-		}
-		if (theCookies[i-1] == "gambling=1" || theCookies[i-1] == " gambling=1"){
-			gamblingcheck = 1
-		}
-		if (theCookies[i-1] == "projects=1" || theCookies[i-1] == " projects=1"){
-			projectscheck = 1
-		}
-		if (theCookies[i-1] == "all=1" || theCookies[i-1] == " all=1" || theCookies[i-1] == "  all=1"){
-			allcheck = 1
-		}
-    }
-    return aString;
-}
-
-console.log(document.cookie);
-console.log(listCookies());
-
-function CheckFunction(){
-if (aboutcheck == 1 && projectscheck == 1 && homecheck == 1 && gamblingcheck == 1) {
-	var r = document.querySelector(':root');
-	r.style.setProperty('--RibbonSize', "50px"); 
-	document.cookie = "all=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
-}
-}
-
-	
-	
-	
-	
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-window.onresize = function() {
-	let z = (window.innerHeight - window.innerWidth/10) + "px";
-	let x = (window.innerWidth/10) + "px";
-	let y = (160) + "px";
-	var r = document.querySelector(':root');
-	r.style.setProperty('--blue', z);
-	r.style.setProperty('--widthbutawesome', x);
-	r.style.setProperty('--smallbox', y);
-}
-window.onload = function () {
-	let z = (window.innerHeight - 223) + "px";
-	let y = (160) + "px";
-	let x = (window.innerWidth/10) + "px";
-	var r = document.querySelector(':root');
-	r.style.setProperty('--blue', z);
-	r.style.setProperty('--widthbutawesome', x);
-	r.style.setProperty('--smallbox', y);
-	CheckFunction()
-}
-onmousemove = function(e){
-	function mouse1(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + 2 + "px";
-	let y = e.clientY + 2 + "px";
-	r.style.setProperty('--mouseposy', y);
-	r.style.setProperty('--mouseposx', x );
-	}
-	setTimeout(mouse1, 0);
-	
-	
-	function mouse2(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + 2 + "px";
-	let y = e.clientY + 2 + "px";
-	r.style.setProperty('--mouseposy1', y);
-	r.style.setProperty('--mouseposx1', x );
-	}
-	setTimeout(mouse2, 35);
-	
-	
-	function mouse3(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + 2 + "px";
-	let y = e.clientY + 2 + "px";
-	r.style.setProperty('--mouseposy2', y);
-	r.style.setProperty('--mouseposx2', x );
-	}
-	setTimeout(mouse3, 70);
-	
-	
-	function mouse4(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + 2 + "px";
-	let y = e.clientY + 2 + "px";
-	r.style.setProperty('--mouseposy3', y);
-	r.style.setProperty('--mouseposx3', x );
-	}
-	setTimeout(mouse4, 105);
-	
-	
-	function mouse5(){
-	var r = document.querySelector(':root');
-	let x = e.clientX + 2 + "px";
-	let y = e.clientY + 2 + "px";
-	r.style.setProperty('--mouseposy4', y);
-	r.style.setProperty('--mouseposx4', x );
-	}
-	setTimeout(mouse5, 140);
-	
-	
-	
-	//console.log("mouse location:", x, y);
-}
-function speedFunction() {
-	var r = document.querySelector(':root');
-	const root = document.querySelector(':root');
-	const compStyles = window.getComputedStyle(root);
-	
-	let x = compStyles.getPropertyValue('--sped')/2;
-	let y = x + "s";
-	r.style.setProperty('--speed', y );
-	r.style.setProperty('--sped', x );
-	
-	if(compStyles.getPropertyValue('--sped') != 2.3283064365386963e-10) {
-	document.getElementById('demo').innerHTML = ""
-	} else {
-		document.getElementById('demo').innerHTML = "error: too silly !!!"
-	}
-}
-function slowFunction() {
-	var r = document.querySelector(':root');
-	const root = document.querySelector(':root');
-	const compStyles = window.getComputedStyle(root);
-	let x = compStyles.getPropertyValue('--sped') * 2;
-	let y = x + "s";
-	r.style.setProperty('--speed', y );
-	r.style.setProperty('--sped', x );
-	document.getElementById('demo').innerHTML = ""
-	
-}
-ribbony = 1
-ribbonx = 1
-//ribbonclicks = 1
-function RibbonFunction(){
-	var r = document.querySelector(':root');
-	console.log(document.getElementsByClassName('ribbon'));
-	if(Math.random() <= .5){
-		ribbonx = Math.random() * -1 * .5;
-	} else{
-		ribbonx = Math.random() * .5;
-	}
-	if(Math.random() <= .5){
-		ribbony = Math.random() * -1 * .5;
-	} else{
-		ribbony = Math.random() * .5;
-	}
-	
-	console.log(r.style.setProperty('--RibbonRandomX', ribbonx ));
-	console.log(r.style.setProperty('--RibbonRandomY', ribbony ));
-	
-}
-//function StopRibbon(){
-///	document.getElementById('ribbon').style.animation = ""
-//}
-
-</script>
-<body>
-<div id="box"></div>
-<div id="box2"></div>
-<div id="box3"></div>
-<div id="box4"></div>
-<div id="box5"></div>
-	<table class="tabl">
-		<tr>
-			<th style="width:var(--widthbutawesome); height:var(--widthbutawesome);"><img id="funy" src="../images/bleh.gif"  width=100% height=160px><p id="demo"></p></th>
-			<th style="width:90%; height:var(--widthbutawesome);"><h1 id="reward" style="margin-bottom:-43px;">audio jungle</h1> 
-			<img class="ribbon" onclick="RibbonFunction()" src="images/ribbon.svg"> 
-			</th> 
-			
-		</tr>
-	</table>
-	<table class="tabl2">
-		<tr>
-			<th style="width:var(--widthbutawesome);text-align:left;box-sizing: content-box; ">
-			<a href="https://icebro.party/">home</h1> <br> <br> <br> <br> 
-			<a href="https://icebro.party/about">about me </h1> <br> <br>  <br> <br> 		
-			<a href="https://icebro.party/blog">blog</h1> <br> <br> <br> <br> 
-			<a href="https://icebro.party/projects">projects</h1> <br> <br> <br> <br> 
-			</th>
-			<th style="text-align:left;display:block; overflow-y:scroll;   height: var(--blue);    box-sizing: content-box; " class="scroller"><!--img src="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true" width = 10% height = 100%--> 
-				<h2>
-			<button class="button" onclick="speedFunction()">spin faster</button> <br>
-			<button class="button" onclick="slowFunction()">spin slower</button> <br>
-			<p style="font-size: 15px;"> website change? no way!! <br>
-			
-			<a href="https://icebro.party/gambling"> nice and calming gambling sfx to go to sleep to </a>
+<html>
+	<head>
+		<script src="javascript/base.js"    > </script>
+		<script src="javascript/cursor.js"> </script>
+		<script src="javascript/cookieHome.js"> </script>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+	<div id="box"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<div id="box4"></div>
+	<div id="box5"></div>
+		<div id="top"> 
+			<!-- the brothers -->
+			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: right;">
+			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: left;">
+			<center>
+			<span class="wave" >
+				<span> a </span>
+				<span> m </span>
+				<span> o </span>
+				<span> n </span>
+				<span> g </span>
+				<span>   </span>
+				<span> u </span>
+				<span> s </span>
+			</span>
+			</center>
+			<div id="container">
+			<a href="https://icebro.party"id="homelink"> home </a>
+			<a href="https://icebro.party/projects"id="projectslink"> projects </a>
+			<a href="https://icebro.party/about"id="aboutlink"> about </a>
+			</div>
+		</div>
+		<div id="bottom">
+			<p>
+					new website once again! realized the sidebar was a bit redundant so i just took everything from the side to up there ^ <br>
+					also since this is technically new, i can redo things and make em a lot better in the backend :3 <br><br><br><br><br>
+					<a href="https://icebro.party/gambling"> gambling !!!!!!! </a>
 			</p>
-			
- 				</h2>
-			</th>
-		</tr>
-	</table>
-</body>
+		</div>
+	</body>
+</html>
