@@ -1,10 +1,10 @@
-let z = (window.innerHeight/16) + "px";
-let y = (window.innerHeight * .15) + "px";
-window.onload = function () { 
+
+	let z = (window.innerHeight/16 ) + "px";
+	let y = (window.innerHeight * .15) + "px";
 	var r = document.querySelector(':root');
 	r.style.setProperty('--waveTop', z);
 	r.style.setProperty('--topHeightJS', y);
-}
+
 window.onresize = function () { 
 	let z = (window.innerHeight/16 ) + "px";
 	let y = (window.innerHeight * .15) + "px";
