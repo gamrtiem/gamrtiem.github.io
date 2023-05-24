@@ -87,8 +87,8 @@ a {
 }
 #projectslink{
 	position:absolute;
-	top: calc(var(--topHeight) - 40px);
-	left: calc(50% - 26px);
+	top: calc(var(--topHeight) - 15px);
+	left: calc(50% - 40px);
 }
 #aboutlink{
 	position:absolute;
