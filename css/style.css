@@ -6,16 +6,18 @@
 	--topHeightJS: 15%;
 	--boxBackgroundColor: #1f1f1f;
 	--waveTop: 50px;
-	--mouseposx: 1px;
-	--mouseposy: 1px;
-	--mouseposx2: -91px;
-	--mouseposy2: -91px;
-	--mouseposx3: -91px;
-	--mouseposy3: -91px;
-	--mouseposx4: -91px;
-	--mouseposy4: -91px;
-	--mouseposx5: -91px;
-	--mouseposy5: -91px;
+	--mouseposx: 90000px;
+	--mouseposy: 90000px;
+	--mouseposx1: 90000px;
+	--mouseposy1: 90000px;
+	--mouseposx2: 90000px;
+	--mouseposy2: 90000px;
+	--mouseposx3: 90000px;
+	--mouseposy3: 90000px;
+	--mouseposx4: 90000px;
+	--mouseposy4: 90000px;
+	--mouseposx5: 90000px;
+	--mouseposy5: 90000px;
 }
 
 @font-face {
