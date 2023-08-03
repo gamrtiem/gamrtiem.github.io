@@ -18,11 +18,14 @@
 	--mouseposy4: 90000px;
 	--mouseposx5: 90000px;
 	--mouseposy5: 90000px;
+	--harhar: none;
+	--harhar2: none;
+	--harhar3: none;
 }
 
 @font-face {
 	font-family: "determination";
-	src: url("/images/DTM-Mono.ttf");
+	src: url("../images/DTM-Mono.ttf");
 }
 table.player {
 	table-layout: fixed;
@@ -98,6 +101,23 @@ a {
 	left: calc(var(--topHeightJS) + 15px);
 }
 
+
+.fastbear{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#fastbear{
+	display: var(--harhar);
+}
+#fasetbear{
+	display: var(--harhar2);
+}
+#faestbear{
+	display: var(--harhar3);
+}
 
 
 .wave span{

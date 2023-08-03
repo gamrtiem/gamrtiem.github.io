@@ -41,6 +41,10 @@ function listCookies() {
 		if (theCookies[i-1] == "projects=1" || theCookies[i-1] == " projects=1"){
 			projectscheck = 1
 		}
+		if (theCookies[i-1] == "change=1" || theCookies[i-1] == " change=1"){
+			changecheck = 1
+		}
+		
 		if (theCookies[i-1] == "all=1" || theCookies[i-1] == " all=1" || theCookies[i-1] == "  all=1"){
 			allcheck = 1
 		}
@@ -50,7 +54,7 @@ function listCookies() {
 
 
 function CheckFunction(){
-if (aboutcheck == 1 && projectscheck == 1 && homecheck == 1 && gamblingcheck == 1) {
+if (aboutcheck == 1 && projectscheck == 1 && homecheck == 1 && gamblingcheck == 1 && changecheck == 1 ) {
 	var r = document.querySelector(':root');
 	r.style.setProperty('--RibbonSize', "50px"); 
 	document.cookie = "all=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
