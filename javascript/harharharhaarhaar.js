@@ -32,7 +32,7 @@ console.log(currentdate.getMinutes());
 
 onclick= function(e){
     let chance = Math.random();
-    if (chance > 0.989 && harhahrhar == false || currentdate.getDay() == 0 && currentdate.getHours() - 12 == 4 && currentdate.getMinutes() > 0 && currentdate.getMinutes() < 15 ){ //
+    if (chance > 0.995 && harhahrhar == false || currentdate.getDay() == 0 && currentdate.getHours() - 12 == 4 && currentdate.getMinutes() > 0 && currentdate.getMinutes() < 15 ){ //
         document.getElementById('harharharharhaarhaar').play();
         document.getElementById('harharharharhaarhaar').volume = 0.3;
 	    harhahrhar = true
