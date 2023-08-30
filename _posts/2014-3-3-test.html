@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="../javascript/base.js"> </script>
+	<script src="../javascript/cursor.js"> </script>
+	<script src="../javascript/cookieAbout.js"> </script>
+	<script src="../javascript/harharharhaarhaar.js"> </script>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="icon" type="image/x-icon"
+		href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
+	<title> about heaven! </title>
+
+	<meta content="icebro dot party" property="og:title" />
+	<meta content="the awesome cool epic awesome !!" property="og:description" />
+	<meta content="https://icebro.party" property="og:url" />
+	<meta content="https://icebro.party/images/him.png" property="og:image" />
+	<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
+	<meta name="twitter:card" content="summary">
+
+
+	<script>
+var i = 1;                  //  set your counter to 1
+
+
+
+myLoop();
+		function fun() {
+			let newWindow = window.open('./2014-3-3-test.html', 'example', 'width=300,height=300');
+
+			newWindow.onload = function () {
+				
+			};
+			var i = 1;                  //  set your counter to 1
+
+				function myLoop() {         //  create a loop function
+					setTimeout(function () {   //  call a 3s setTimeout when the loop is called
+						newWindow.moveBy(0, 3);   //  your code here
+						i++;                    //  increment the counter
+						if (i < 10000) {           //  if the counter < 10, call the loop function
+							myLoop();             //  ..  again which will trigger another 
+						}                       //  ..  setTimeout()
+					}, 100)
+				}
+
+				myLoop();
+		}
+	</script>
+
+</head>
+
+<body>
+	<img src="../images/fastbear.jpeg" class="fastbear" id="fastbear">
+	<img src="../images/fasetbear.jpeg" class="fastbear" id="fasetbear">
+	<img src="../images/faestbear.png" class="fastbear" id="faestbear">
+	<audio src="../sfx/fnafambiance.mp3" id="harharharharhaarhaar"></audio>
+	<div id="box"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<div id="box4"></div>
+	<div id="box5"></div>
+	<div id="top">
+		<!-- the brothers -->
+		<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: right;">
+		<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: left;">
+		<center>
+			<span class="wave">
+				<span> a </span>
+				<span> m </span>
+				<span> o </span>
+				<span> n </span>
+				<span> g </span>
+				<span> </span>
+				<span> u </span>
+				<span> s </span>
+			</span>
+		</center>
+		<div id="container">
+			<a href="https://icebro.party" id="homelink"> home </a>
+			<a href="https://icebro.party/projects" id="projectslink"> projects </a>
+			<a href="https://icebro.party/about" id="aboutlink"> about </a>
+		</div>
+	</div>
+	<div id="bottom" class="scroller">
+		<p>
+			<button type="button" onclick="fun()">Click Me!</button>
+		</p>
+	</div>
+</body>
+
+</html>

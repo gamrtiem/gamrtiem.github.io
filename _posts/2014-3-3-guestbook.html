@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="../javascript/base.js"> </script>
+	<script src="../javascript/cursor.js"> </script>
+	<script src="../javascript/cookieAbout.js"> </script>
+	<script src="../javascript/harharharhaarhaar.js"> </script>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="icon" type="image/x-icon"
+		href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
+	<title> about heaven! </title>
+
+	<meta content="icebro dot party" property="og:title" />
+	<meta content="the awesome cool epic awesome !!" property="og:description" />
+	<meta content="https://icebro.party" property="og:url" />
+	<meta content="https://icebro.party/images/him.png" property="og:image" />
+	<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
+	<meta name="twitter:card" content="summary">
+	
+	<style>
+		:root{
+			--random: 75%;
+			--random1: 90%;
+			--random2: 60%;
+			--random3: 69%;
+			--random4: 73%;
+		}
+		html{
+			margin:0px;
+		}
+		#top {
+			z-index:10;
+			width: 45%;
+			border: 5px;
+			border-style: solid;
+			margin:0px;
+			border-color:var(--accent);
+		}
+
+		#bottom {
+			z-index:10;
+			width: 45%;
+			border: 5px;
+			border-style: solid;
+			margin:0px;
+			border-color:var(--accent);
+		}
+
+		.star{
+			z-index:-1;
+			position: absolute;
+		}
+		#star {
+			animation: starfall 1s linear infinite;
+		}
+
+		#star1 {
+			animation: starfall1 1.8s linear infinite;
+		}
+
+		#star2 {
+			animation: starfall2 0.9s linear infinite;
+		}
+
+		#star3 {
+			animation: starfall3 1.3s linear infinite;
+		}
+
+		#star4 {
+			animation: starfall4 1.1s linear infinite;
+		}
+
+		@keyframes starfall {
+			0% {
+				top: 0px;
+				rotate: 0deg;
+				left: calc(30%);
+			}
+			100% {
+				top: calc(100% - 50px);
+				rotate: 360deg;
+				left: var(--random);
+			}
+		}
+
+		@keyframes starfall1 {
+			0% {
+				top: 0px;
+				rotate: 0deg;
+				left: calc(30%);
+			}
+			100% {
+				top: calc(100% - 50px);
+				rotate: 360deg;
+				left: var(--random1);
+			}
+		}
+
+		@keyframes starfall2 {
+			0% {
+				top: 0px;
+				rotate: 0deg;
+				left: calc(30%);
+			}
+			100% {
+				top: calc(100% - 50px);
+				rotate: 360deg;
+				left: var(--random2);
+			}
+		}
+
+		@keyframes starfall3 {
+			0% {
+				top: 0px;
+				rotate: 0deg;
+				left: calc(30%);
+			}
+			100% {
+				top: calc(100% - 50px);
+				rotate: 360deg;
+				left: var(--random3);
+			}
+		}
+
+		@keyframes starfall4 {
+			0% {
+				top: 0px;
+				rotate: 0deg;
+				left: calc(30%);
+			}
+			100% {
+				top: calc(100% - 50px);
+				rotate: 360deg;
+				left: var(--random4);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<img src="../images/fastbear.jpeg" class="fastbear" id="fastbear">
+	<img src="../images/fasetbear.jpeg" class="fastbear" id="fasetbear">
+	<img src="../images/faestbear.png" class="fastbear" id="faestbear">
+	<audio src="../sfx/fnafambiance.mp3" id="harharharharhaarhaar"></audio>
+	<div id="box"></div>
+	<div id="box2"></div>
+	<div id="box3"></div>
+	<div id="box4"></div>
+	<div id="box5"></div>
+	<img src="../images/star.png" class="star" id="star">
+	<img src="../images/star.png" class="star" id="star1">
+	<img src="../images/star.png" class="star" id="star2">
+	<img src="../images/star.png" class="star" id="star3">
+	<img src="../images/star.png" class="star" id="star4">
+	<div id="top">
+
+	</div>
+	<div id="bottom" class="scroller">
+
+	</div>
+	<script>
+
+
+		//function changeAnimationTime() {
+	//		var randon = (Math.floor(Math.random() * window.innerWidth));
+	//		while (randon < window.innerWidth/2){
+	//			randon = (Math.floor(Math.random() * window.innerWidth));
+	//		}
+	//		document.querySelector(':root').style.setProperty('--random',  randon + "px");
+			//document.getElementById("star").style.property = 'position: absolute; animation: starfall 1s linear 1;'
+	//	}
+
+	var star = document.getElementById("star");
+	var star1 = document.getElementById("star1");
+	var star2 = document.getElementById("star2");
+	var star3 = document.getElementById("star3");
+	var star4 = document.getElementById("star4");
+
+	star.addEventListener("animationiteration", function() {
+		var randon = (Math.floor(Math.random() * window.innerWidth));
+		while (randon < window.innerWidth/2){
+			randon = (Math.floor(Math.random() * window.innerWidth));
+		}
+		document.querySelector(':root').style.setProperty('--random',  randon + "px");
+	});
+
+	star1.addEventListener("animationiteration", function() {
+		var randon = (Math.floor(Math.random() * window.innerWidth));
+		while (randon < window.innerWidth/2){
+			randon = (Math.floor(Math.random() * window.innerWidth));
+		}
+		document.querySelector(':root').style.setProperty('--random1',  randon + "px");
+	});
+
+	star2.addEventListener("animationiteration", function() {
+		var randon = (Math.floor(Math.random() * window.innerWidth));
+		while (randon < window.innerWidth/2){
+			randon = (Math.floor(Math.random() * window.innerWidth));
+		}
+		document.querySelector(':root').style.setProperty('--random2',  randon + "px");
+	});
+
+	star3.addEventListener("animationiteration", function() {
+		var randon = (Math.floor(Math.random() * window.innerWidth));
+		while (randon < window.innerWidth/2){
+			randon = (Math.floor(Math.random() * window.innerWidth));
+		}
+		document.querySelector(':root').style.setProperty('--random3',  randon + "px");
+	});
+
+	star4.addEventListener("animationiteration", function() {
+		var randon = (Math.floor(Math.random() * window.innerWidth));
+		while (randon < window.innerWidth/2){
+			randon = (Math.floor(Math.random() * window.innerWidth));
+		}
+		document.querySelector(':root').style.setProperty('--random4',  randon + "px");
+	});
+	</script>
+</body>
+
+</html>
