@@ -10,7 +10,7 @@ onclick = function (e) {
     var theCookies = document.cookie.split(';');
     var aString = '';
     for (var i = 1 ; i <= theCookies.length; i++) {
-		if (theCookies[i-1] == " kabeewm=1"){
+		if (theCookies[i-1] == " kabeewm=1" || theCookies[i-1] == "kabeewm=1"){
 			var sound = '<audio src="../sfx/snd_badexplosion.mp3" id="kabeewm' + count + '"></audio>';
             document.body.insertAdjacentHTML('beforeend', sound);
             document.getElementById('kabeewm' + count).play();
@@ -29,7 +29,7 @@ function kabeewm(){
     var theCookies = document.cookie.split(';');
     var aString = '';
     for (var i = 1 ; i <= theCookies.length; i++) {
-		if (theCookies[i-1] == " kabeewm=1"){
+		if (theCookies[i-1] == " kabeewm=1" || theCookies[i-1] == "kabeewm=1"){
 			cookie_string = "kabeewm=0; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
             document.cookie = cookie_string;
             document.getElementById('kabeewmm').innerHTML = "kabeewm ?"
