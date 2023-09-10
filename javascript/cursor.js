@@ -1,6 +1,10 @@
 onmousemove = function(e){
 	let x = e.clientX + 1 + "px";
 	let y = e.clientY + 1 + "px";
+
+	xx = e.clientX - 35 + "px";
+	yy = e.clientY - 60 + "px";
+	//^is used for kabeewm.js but since you cant change onmousemove twice i had to shove it here 
 	var r = document.querySelector(':root');
 	
 	function mouse1(){

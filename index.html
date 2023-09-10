@@ -47,6 +47,8 @@
 			<a href="https://icebro.party/about"id="aboutlink"> about </a>
 			</div>
 		</div>
+		
+		
 		<div id="bottom">
 			<p>
 					new website once again! realized the sidebar was a bit redundant so i just took everything from the side to up there ^ <br>
@@ -54,7 +56,28 @@
 					<a href="https://icebro.party/gambling"> gambling !!!!!!! </a>
 					<br><br><br><br> <!-- me when i am cold --> <br><br><br><br>
 					<a href="https://icebro.party/changelog"> changes !!!!!!! </a>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<button class="button" style="margin-left:10px;" id="kabeewmm" onclick="kabeewm()">kabeewm ?</button>
 			</p>
 		</div>
+		<script src="javascript/kabeewm !.js"> </script>
+		<script>
+			window.onload = function() {
+			var theCookies = document.cookie.split(';');
+    		var aString = '';
+			for (var i = 1 ; i <= theCookies.length; i++) {
+				if (theCookies[i-1] == " kabeewm=1"){
+            		document.getElementById('kabeewmm').innerHTML = "kabeewm !!!!"
+				} else {
+            		document.getElementById('kabeewmm').innerHTML = "kabeewm ?"
+    			}
+			}
+			
+  			}
+		</script>
 	</body>
 </html>
