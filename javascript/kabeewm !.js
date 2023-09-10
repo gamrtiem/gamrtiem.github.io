@@ -11,12 +11,12 @@ onclick = function (e) {
     var aString = '';
     for (var i = 1 ; i <= theCookies.length; i++) {
 		if (theCookies[i-1] == " kabeewm=1"){
-			var sound = '<audio src="./sfx/snd_badexplosion.mp3" id="kabeewm' + count + '"></audio>';
+			var sound = '<audio src="../sfx/snd_badexplosion.mp3" id="kabeewm' + count + '"></audio>';
             document.body.insertAdjacentHTML('beforeend', sound);
             document.getElementById('kabeewm' + count).play();
             document.getElementById('kabeewm' + count).volume = 0.1;
 
-            var html = '<div id="op' + count + '" style="pointer-events: none; position: absolute; z-index: 99999; top: ' + yy + '; left: ' + xx + ';"><img src="./images/kabeewm !.gif?v=' + count + '"></div>';
+            var html = '<div id="op' + count + '" style="pointer-events: none; position: absolute; z-index: 99999; top: ' + yy + '; left: ' + xx + ';"><img src="../images/kabeewm !.gif?v=' + count + '"></div>';
             document.body.insertAdjacentHTML('beforeend', html);
             setTimeout(remove.bind(null, count), 2500);
             count++;
