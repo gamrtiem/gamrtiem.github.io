@@ -1,16 +1,28 @@
 let count = 500
 let xx = '0px';
 let yy = '0px';
+
+var theCookies = document.cookie.split('=');
+    var aString = '';
+    for (var i = 1 ; i <= theCookies.length; i++) {
+		if (theCookies[i-1] == "kabeewm" || theCookies[i-1] == "1; kabeewm"){
+			console.log(theCookies[i]);
+			count = theCookies[i];
+		} 
+    }
+
+
+
 function remove(counter) {
     document.getElementById('op' + counter).remove();
     document.getElementById('kabeewm' + counter).remove();
 }
 
 onclick = function (e) {
-    var theCookies = document.cookie.split(';');
+    var theCookies = document.cookie.split('=');
     var aString = '';
     for (var i = 1 ; i <= theCookies.length; i++) {
-		if (theCookies[i-1] == " kabeewm=1" || theCookies[i-1] == "kabeewm=1"){
+		if (theCookies[i-1] == "kabeewm" || theCookies[i-1] == "1; kabeewm"){
 			var sound = '<audio src="../sfx/snd_badexplosion.mp3" id="kabeewm' + count + '"></audio>';
             document.body.insertAdjacentHTML('beforeend', sound);
             document.getElementById('kabeewm' + count).play();
@@ -20,21 +32,22 @@ onclick = function (e) {
             document.body.insertAdjacentHTML('beforeend', html);
             setTimeout(remove.bind(null, count), 2500);
             count++;
+			theCookies[i] = count;
 		} 
     }
     
 }
 
 function kabeewm(){
-    var theCookies = document.cookie.split(';');
+    var theCookies = document.cookie.split('=');
     var aString = '';
     for (var i = 1 ; i <= theCookies.length; i++) {
-		if (theCookies[i-1] == " kabeewm=1" || theCookies[i-1] == "kabeewm=1"){
+		if (theCookies[i-1] == "kabeewm" || theCookies[i-1] == "1; kabeewm"){
 			cookie_string = "kabeewm=0; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
             document.cookie = cookie_string;
             document.getElementById('kabeewmm').innerHTML = "kabeewm ?"
 		} else {
-            cookie_string = "kabeewm=1; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+            cookie_string = "kabeewm=" + count + "; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
             document.cookie = cookie_string;
             document.getElementById('kabeewmm').innerHTML = "kabeewm !!!!"
         }
