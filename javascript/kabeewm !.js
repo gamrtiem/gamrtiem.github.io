@@ -1,4 +1,4 @@
-let count = 0
+let count = 1
 let xx = '0px';
 let yy = '0px';
 
@@ -36,18 +36,7 @@ onclick = function (e) {
 
 }
 
-/*
-var sound = '<audio src="../sfx/snd_badexplosion.mp3" id="kabeewm' + count + '"></audio>';
-document.body.insertAdjacentHTML('beforeend', sound);
-document.getElementById('kabeewm' + count).play();
-document.getElementById('kabeewm' + count).volume = 0.1;
 
-var html = '<div id="op' + count + '" style="pointer-events: none; position: absolute; z-index: 99999; top: ' + yy + '; left: ' + xx + ';"><img src="../images/kabeewm !.gif?v=' + count + '"></div>';
-document.body.insertAdjacentHTML('beforeend', html);
-setTimeout(remove.bind(null, count), 2500);
-count++;
-
-*/
 
 function kabeewm() {
 	var kabeewmcheckifitsthereornot = document.cookie.split('=');
@@ -60,7 +49,8 @@ function kabeewm() {
 				document.getElementById('kabeewmm').innerHTML = "kabeewm ?"
 				console.log("dsiabling")
 			} else {
-				cookie_string = "kabeewm=" + count + "; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+				cookie_string = "kabeewm=" + count + 6 + "; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+				//WHY DOES IT [[add six to the sum!]] HERE??? IT WOULDNT [[works great on sinks and dishes!]] OTHERWISE !!!!!!!!!!!!!!!!!!!!!
 				document.cookie = cookie_string;
 				document.getElementById('kabeewmm').innerHTML = "kabeewm !!!!"
 				console.log("activatiing")
@@ -74,15 +64,7 @@ function kabeewm() {
 
 
 }
-/*
-onclick = function (e) {
-	var html = '<div id="op' + count + '" style="pointer-events: none; position: absolute; z-index: 999; top: ' + yy + '; left: ' + xx + ';"><img src="./images/kabeewm !.gif?v=' + count + '"></div>';
-	document.body.insertAdjacentHTML('beforeend', html);
-	setTimeout(remove.bind(null, count), 820);
-    
-	count++;
-}
-*/
+
 
 
 
