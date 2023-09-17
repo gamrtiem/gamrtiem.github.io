@@ -2,8 +2,7 @@ let count = 1
 let xx = '0px';
 let yy = '0px';
 
-var theCookies = document.cookie.split('=');
-var aString = '';
+var kabeewmcheckifitsthereornot = document.cookie.split('=');
 for (var i = 1; i <= theCookies.length; i++) {
 	if (theCookies[i - 1] == "kabeewm" || theCookies[i - 1] == "1; kabeewm") {
 		if (kabeewmcheckifitsthereornot[i] > 1) {
