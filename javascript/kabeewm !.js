@@ -6,8 +6,10 @@ var theCookies = document.cookie.split('=');
 var aString = '';
 for (var i = 1; i <= theCookies.length; i++) {
 	if (theCookies[i - 1] == "kabeewm" || theCookies[i - 1] == "1; kabeewm") {
-		console.log(theCookies[i]);
-		count = theCookies[i];
+		if (kabeewmcheckifitsthereornot[i] > 1) {
+			console.log(theCookies[i]);
+			count = theCookies[i];
+		} 
 	}
 }
 
