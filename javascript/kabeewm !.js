@@ -1,4 +1,4 @@
-let count = 1
+let count = 0
 let xx = '0px';
 let yy = '0px';
 
