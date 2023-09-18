@@ -4,16 +4,21 @@ let yy = '0px';
 
 var theCookies = document.cookie.split('=');
 var kabeewmcheckifitsthereornot = document.cookie.split('=');
+kabeewmcookieexists = false;
 for (var i = 1; i <= theCookies.length; i++) {
 	if (theCookies[i - 1] == "kabeewm" || theCookies[i - 1] == "1; kabeewm") {
 		if (kabeewmcheckifitsthereornot[i] > 1) {
 			console.log(theCookies[i]);
 			count = theCookies[i];
+			kabeewmcookieexists = true;
 		} 
 	}
 }
 
-
+if(!kabeewmcookieexists){
+	cookie_string = "kabeewm=0; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+	document.cookie = cookie_string;
+}
 
 function remove(counter) {
 	document.getElementById('op' + counter).remove();
@@ -50,7 +55,7 @@ function kabeewm() {
 				document.cookie = cookie_string;
 				document.getElementById('kabeewmm').innerHTML = "kabeewm ?"
 				console.log("dsiabling")
-			} else {
+			} else if(kabeewmcheckifitsthereornot[i] == 0) {
 				cookie_string = "kabeewm=" + count + 6 + "; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
 				//WHY DOES IT [[add six to the sum!]] HERE??? IT WOULDNT [[works great on sinks and dishes!]] OTHERWISE !!!!!!!!!!!!!!!!!!!!!
 				document.cookie = cookie_string;
