@@ -4,11 +4,11 @@ let yy = '0px';
 
 var theCookies = document.cookie.split('=');
 var kabeewmcheckifitsthereornot = document.cookie.split('=');
-kabeewmcookieexists = false;
+kabeewmcookieexists = true;
 for (var i = 1; i <= theCookies.length; i++) {
 	if (theCookies[i - 1] == "kabeewm" || theCookies[i - 1] == "1; kabeewm") {
 		if (kabeewmcheckifitsthereornot[i] > 1) {
-			console.log(theCookies[i]);
+			console.log(theCookies[i] + " wowie !!! ");
 			count = theCookies[i];
 			kabeewmcookieexists = true;
 		} 
@@ -18,7 +18,10 @@ for (var i = 1; i <= theCookies.length; i++) {
 if(!kabeewmcookieexists){
 	cookie_string = "kabeewm=0; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
 	document.cookie = cookie_string;
+	console.log(kabeewmcookieexists + " icky bad creatngg kaboom cookie now !!");
 }
+
+console.log(count + " wowie !!! ");
 
 function remove(counter) {
 	document.getElementById('op' + counter).remove();
@@ -38,6 +41,11 @@ onclick = function (e) {
 			document.body.insertAdjacentHTML('beforeend', html);
 			setTimeout(remove.bind(null, count), 2500);
 			count++;
+
+
+			console.log(count + " wowie !!! ");
+			cookie_string = "kabeewm=" + count + "; path=/; expires=Thu, 14 Dec 2023 12:00:00 UTC;";
+			document.cookie = cookie_string;
 		}
 	}
 
@@ -65,11 +73,6 @@ function kabeewm() {
 			}
 		}
 	}
-
-
-
-
-
 }
 
 
