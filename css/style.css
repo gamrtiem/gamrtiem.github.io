@@ -5,7 +5,7 @@
 	--topHeight: 15%;
 	--topHeightJS: 15%;
 	--boxBackgroundColor: #1f1f1f;
-	--waveTop: 50px;
+	--waveTop: 23%;
 	--mouseposx: 90000px;
 	--mouseposy: 90000px;
 	--mouseposx1: 90000px;
@@ -27,6 +27,10 @@
 @font-face {
 	font-family: "determination";
 	src: url("../images/DTM-Mono.ttf");
+}
+@font-face {
+	font-family: "title";
+	src: url("../images/fonts/MonsterFriendFore.otf");
 }
 table.player {
 	table-layout: fixed;
