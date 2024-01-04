@@ -8,7 +8,7 @@
 		<script src="../javascript/harharharhaarhaar.js"> </script>
 		<link rel="stylesheet" href="../css/style.css">
 		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
-		<title> about heaven! </title>
+		<title> starstorms... fascinating. perhaps usable in our attempts. </title>
 		
 		<meta content="icebro dot party" property="og:title" />
 		<meta content="the awesome cool epic awesome !!" property="og:description" />
@@ -66,6 +66,10 @@
 			<br>
 			<br>
 			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			byeah
 			</p>
 		
@@ -77,10 +81,10 @@
 			</p>
 
 			<ul>
-				<li style="margin-bottom: 5px;"> <a href="https://unity.com/download">unity hub !</a></li>
-				<li style="margin-bottom: 5px;"> <a href="https://unity.com/releases/editor/archive#download-archive-2019">unity version 2019.4.26f1 !</a></li>
-				<li style="margin-bottom: 5px;"> <a href="https://desktop.github.com">github desktop or the like !</a></li>
-				<li style="margin-bottom: 5px;"> <a href="https://github.com/teammoonstorm/starstorm2">link to ss2 github !</a></li>
+				<li style="margin-bottom: 5px;"> <a href="https://unity.com/download" target="_blank">unity hub !</a></li>
+				<li style="margin-bottom: 5px;"> <a href="https://unity.com/releases/editor/archive#download-archive-2019" target="_blank">unity version 2019.4.26f1 !</a></li>
+				<li style="margin-bottom: 5px;"> <a href="https://desktop.github.com" target="_blank">github desktop or the like !</a></li>
+				<li style="margin-bottom: 5px;"> <a href="https://github.com/teammoonstorm/starstorm2" target="_blank">link to ss2 github !</a></li>
 			</ul>
 
 
@@ -88,22 +92,21 @@
 				how 2 use !!
 			</p>
 			<p>
-				now heres where things get fun !! <br> <br>
 				copy the repo into your git client of choice ! (if you have an sdd available, use it, itll make project load times much faster) <br> <br>
 				<img src="../images/ss2/copying repo.gif" style="width:800px;"> <br> <br>
-				once thats done, in unity select the project and let it import, make sure you select SS2-Project and starstorm2 (this may take a while, be patience !!)  <br> <br>
+				once thats done, in unity select the SS2-Project folder and let it import !! (this may take a while, be patience !!)  <br> <br>
 				<img src="../images/ss2/importing.gif"    style="width:800px;"> <br> <br>
 				youll also run into this message, just click understood as this will go away once we import ror2 <br> <br> 
 				<img src="../images/ss2/no mono.cecil.dll found.png"> <br> <br>
 				now you should have the project in unity, and theres gonna be a ton of errors because you havent imported the game silly !!! <br> <br>
 				there should also be a thunderkit window open, in there go to the import configuraton and disable legacy api (this one will cause issues) and ror2 editor kit (this one will be installed even if turned off) <br> 
-				now go to the thunderkit settings tab, select your directory (this can be found by right clicking the game on steam, hovering over properties and selecting browse local files) and import it. <br> <br>
+				now go to the thunderkit settings tab, select your game directory (this can be found by right clicking the game on steam, hovering over properties and selecting browse local files) and import it. <br> <br>
 				<img src="../images/ss2/importig game.gif"style="width:800px;"> <br>
 				<img src="../images/ss2/these two.png"style="width:800px;"> <br><br>
 				you will also need to update r2api.AdressableAssets, to do this go to tools -> thunderkit -> packages and search r2api. now in thunderstore plugins, go to r2api.AdressableAssets and uninstall it, then reopen the project. go back to packages and install r2api.AdressableAssets making sure the version is 1.0.3 <br><br>
 				<img src="../images/ss2/r2api AdressableAssets uninstall.gif" style="width:800px;"> <br>
 				<img src="../images/ss2/r2api AdressableAssets install.gif" style="width:800px;"> <br> <br>
-				now, with all of that done, reimport ror2 one last time (some stuff isnt set the first time)  <br> <br>
+				with all of that done, reimport ror2 one last time (some stuff isnt set the first time)  <br> <br>
 				<img src="../images/ss2/reimporting game.gif"style="width:800px;"> <br> <br>
 				once it is done importing, go to edit -> project settings -> player and under Scripting Define Symbols, put "TK_ADDRESSABLE;UNITY_POST_PROCESSING_STACK_V2;RISKOFRAIN2;RISKOFTHUNDER_R2API_CORE;RISKOFTHUNDER_R2API_CONTENTMANAGEMENT" without the "" and reopen the project (this will make ror2 editor kit actually work (ty ly earthzebra for giving me this info from nebby)) <br> <br>
 				!!! MAKE SURE TO SELECT ANOTHER TEXT BAR OR SOMETHING ELSE SO IT SAVES !!!<br>

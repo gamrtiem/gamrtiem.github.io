@@ -1,5 +1,6 @@
 :root{
 	--accent: #F3D2F7;
+	--accentAnolgo: #E382C9;
 	--width: calc(100% - 10px);
 	--bottomHeight: calc(85% - 15px);
 	--topHeight: 15%;
@@ -91,6 +92,9 @@ a {
 	color: var(--accent);
 	text-decoration: none;
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), pointer;
+}
+a:hover{
+	color: var(--accentAnolgo);
 }
 #homelink{
 	position:absolute;
