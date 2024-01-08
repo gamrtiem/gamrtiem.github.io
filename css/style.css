@@ -92,9 +92,11 @@ a {
 	color: var(--accent);
 	text-decoration: none;
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), pointer;
+	transition: .5s ease-out;
 }
 a:hover{
 	color: var(--accentAnolgo);
+	transition: 0s ease-out;
 }
 #homelink{
 	position:absolute;
