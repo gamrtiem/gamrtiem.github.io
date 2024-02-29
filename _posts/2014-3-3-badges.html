@@ -28,6 +28,16 @@
 			/* horizontal */
 			background: none;
 		}
+		#badgehover:hover {
+			animation: boining 1s ease-in-out infinite;
+			transition: 0s ease-out;
+		}
+		@keyframes boining {
+ 			0%   { height:100% }
+ 			50%  {height:0%}
+ 			100% {height:100%}
+		}
+
 		</style>
 	</head>
 	<body>
@@ -64,7 +74,7 @@
 		</div>
 		<div id="bottom" class="scroller">
 			<div id="osaka">
-				<a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button6.gif"></a>
+				<a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button6.gif" id="badgehover"></a>
 			</div>
 		</div>
 		<div id="silly box" style="position:absolute; bottom: 0px; right: 0px; width:400px;">
