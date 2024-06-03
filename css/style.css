@@ -94,6 +94,9 @@ a {
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), pointer;
 	transition: .5s ease-out;
 }
+li {
+	padding-bottom: 4px;
+}
 a:hover{
 	color: var(--accentAnolgo);
 	transition: 0s ease-out;
@@ -200,19 +203,10 @@ p {
 }
 .wave span:nth-child(5) {
 	animation-delay:0.2s;
-	padding-right: 5px;
 }
 .wave span:nth-child(6) {
 	animation-delay:0.25s;
 }
-.wave span:nth-child(7) {
-	animation-delay:0.3s;
-}
-.wave span:nth-child(8) {
-	animation-delay:0.35s;
-}
-
-
 
 
 #loop {
@@ -244,6 +238,9 @@ p {
 }
 
 
+
+
+/* note to optimize these; can just be a big class with ids being the changes */
 
 #box {
   border: 15px solid white;
