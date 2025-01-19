@@ -1,12 +1,12 @@
 :root{
 	--accent: #F3D2F7;
 	--accentAnolgo: #E382C9;
-	--width: calc(100% - 20px);
-	--bottomHeight: calc(85% - 30px);
+	--width: calc(100% - 10px);
+	--bottomHeight: calc(85% - 15px);
 	--topHeight: 15%;
 	--topHeightJS: 15%;
 	--boxBackgroundColor: #1f1f1f;
-	--waveTop: 23%;
+	--waveTop: 10%;
 	--mouseposx: 90000px;
 	--mouseposy: 90000px;
 	--mouseposx1: 90000px;
@@ -25,6 +25,7 @@
 	--harhar4:none;
 	--border-color: transparent;
 	--statusHeight: 0px;
+	--topMask: calc(100% - var(--statusHeight))
 }
 
 @font-face {
@@ -40,7 +41,7 @@ table.player {
 	overflow-x:hidden;
 
 	height: 50px;
-	border:2px solid var(--border-color);
+	border:2px solid var(--accent);
 	background-color: #1d1d1d;
 	color: white;
 	padding-bottom:10px;
@@ -50,11 +51,13 @@ table.player {
 	
 }
 .button{
-	border:2px solid var(--border-color);
+	border:2px solid var(--accent);
 	background-color: #1d1d1d;
 	background-image: url('../images/stars dark different.gif.gif');
 	color: white;
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), auto;
+	font-family: "determination";
+
 }
 #top {
 	width:var(--width);
@@ -63,12 +66,14 @@ table.player {
 	background-image: url('../images/stars dark different.gif.gif');
 }
 #bottom {
-	margin-top:10px;
+	margin-top:5px;
 	width:var(--width);
 	height: var(--bottomHeight);
 	background-color:var(--boxBackgroundColor);
 	box-sizing: content-box;
 	background-image: url('../images/stars dark different.gif.gif');
+	mask-composite: exclude;
+	clip-path: polygon(100% 0, 100% var(--topMask), calc(100% - 395px) var(--topMask), calc(100% - 395px) 100%, 0 100%, 0 0);
 }
 html{ 
     padding: 0;
@@ -81,7 +86,7 @@ html{
 
 }
 body{
-	margin:10px;
+	margin:5px;
 	width: 100%; 
     height: 100%;
 	background: var(--border-color);
@@ -89,7 +94,9 @@ body{
 	font-size:200%;
 	font-family: "determination";
 }
-
+th {
+	font-weight: normal;
+}
 a {
 	color: var(--accent);
 	text-decoration: none;
@@ -339,8 +346,7 @@ p {
 	background-image: url('../images/stars dark different.gif.gif');
 }
 #behindstatus {
-	height: var(--statusHeight);
-	background: var(--border-color);
+
 }
 .behindall{
 	width:200%;
@@ -349,12 +355,16 @@ p {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url("../images/stars purp different.gif.gif");
+	background-image: url('../images/stars purp different.gif.gif');
 	background-color: var(--accent);
-	animation: bganim 2s linear infinite;
+	animation: bganim 12s linear infinite;
 }
 
 @keyframes bganim {
-	0%   { top: -50px; left: -50px;}
+	0%   { top: -256px; left: -256px;}
+	100% {top: 0; left: 0;}
+}
+@keyframes statusanim {
+	0%   { top: 256px; left: 256px;}
 	100% {top: 0; left: 0;}
 }
