@@ -1,8 +1,8 @@
 :root{
 	--accent: #F3D2F7;
 	--accentAnolgo: #E382C9;
-	--width: calc(100% - 10px);
-	--bottomHeight: calc(85% - 15px);
+	--width: calc(100% - 20px);
+	--bottomHeight: calc(85% - 30px);
 	--topHeight: 15%;
 	--topHeightJS: 15%;
 	--boxBackgroundColor: #1f1f1f;
@@ -23,11 +23,13 @@
 	--harhar2: none;
 	--harhar3: none;
 	--harhar4:none;
+	--border-color: transparent;
+	--statusHeight: 0px;
 }
 
 @font-face {
 	font-family: "determination";
-	src: url("../images/DTM-Mono.ttf");
+	src: url("../images/fonts/DeterminationSansWeb.otf");
 }
 @font-face {
 	font-family: "title";
@@ -38,7 +40,7 @@ table.player {
 	overflow-x:hidden;
 
 	height: 50px;
-	border:2px solid #F3D2F7;  
+	border:2px solid var(--border-color);
 	background-color: #1d1d1d;
 	color: white;
 	padding-bottom:10px;
@@ -48,7 +50,7 @@ table.player {
 	
 }
 .button{
-	border:2px solid #F3D2F7;  
+	border:2px solid var(--border-color);
 	background-color: #1d1d1d;
 	background-image: url('../images/stars dark different.gif.gif');
 	color: white;
@@ -61,30 +63,30 @@ table.player {
 	background-image: url('../images/stars dark different.gif.gif');
 }
 #bottom {
-	margin-top:5px;
+	margin-top:10px;
 	width:var(--width);
 	height: var(--bottomHeight);
 	background-color:var(--boxBackgroundColor);
 	box-sizing: content-box;
-	display:box;
 	background-image: url('../images/stars dark different.gif.gif');
 }
 html{ 
-    padding: 0; 
+    padding: 0;
     width: 100%; 
     height: 100%;
 	overflow: hidden;
 	color:white;
-	background-color:var(--accent);
+	background: var(--border-color);
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), auto;
 
 }
 body{
-	margin:5px;
+	margin:10px;
 	width: 100%; 
     height: 100%;
-	background-color:var(--accent);
+	background: var(--border-color);
 	font-weight: 10;
+	font-size:200%;
 	font-family: "determination";
 }
 
@@ -103,17 +105,17 @@ a:hover{
 }
 #homelink{
 	position:absolute;
-	top: calc(var(--topHeight) - 15px);
-	left: calc(100% - var(--topHeightJS) - 55px);
+	top: calc(var(--topHeight) - 30px);
+	left: calc(100% - var(--topHeightJS) - 65px);
 }
 #projectslink{
 	position:absolute;
-	top: calc(var(--topHeight) - 15px);
-	left: calc(50% - 40px);
+	top: calc(var(--topHeight) - 30px);
+	left: calc(50% - 55px);
 }
 #aboutlink{
 	position:absolute;
-	top: calc(var(--topHeight) - 15px);
+	top: calc(var(--topHeight) - 30px);
 	left: calc(var(--topHeightJS) + 15px);
 }
 
@@ -159,8 +161,9 @@ a:hover{
 p {
 	padding: 20px 0 20px 20px;
 	margin: 0 0 0 0;
-	font-size: 100%;
 	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 .scroller {
   overflow-y: scroll;
@@ -315,11 +318,12 @@ p {
 }
 
 #statuscafe {
-    padding: .5em;
 	z-index: 10;
+	font-size: 50%;
     background-color: #1f1f1f;
 	background-image: url('../images/stars dark different.gif.gif');
-    border: 5px solid #F3D2F7;
+
+	padding: 5px;
 }
 #statuscafe-username {
     margin-bottom: .5em;
@@ -331,6 +335,26 @@ p {
 	padding: 0 .5em .5em .5em;
 	z-index: 10;
     background-color: #1f1f1f;
-    border: 5px solid #F3D2F7;
+    border: 5px solid var(--border-color);
 	background-image: url('../images/stars dark different.gif.gif');
+}
+#behindstatus {
+	height: var(--statusHeight);
+	background: var(--border-color);
+}
+.behindall{
+	width:200%;
+	height: 200%;
+	z-index: -66;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url("../images/stars purp different.gif.gif");
+	background-color: var(--accent);
+	animation: bganim 2s linear infinite;
+}
+
+@keyframes bganim {
+	0%   { top: -50px; left: -50px;}
+	100% {top: 0; left: 0;}
 }
