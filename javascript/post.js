@@ -1,4 +1,4 @@
-const b = document.getElementById("behindstatus");
+let b = document.getElementById("behindstatus");
 const h = document.getElementById("statuscafe");
 console.log(b)
 function outputsize() {
