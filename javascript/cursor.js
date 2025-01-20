@@ -1,8 +1,8 @@
 var r = document.querySelector(':root');
 
 onmousemove = function(e) {
-	let x = e.clientX + 1 + "px";
-	let y = e.clientY + 1 + "px";
+	let x = e.pageX + 1 + "px";
+	let y = e.pageY + 1 + "px";
 
 	xx = e.clientX - 35 + "px";
 	yy = e.clientY - 60 + "px";

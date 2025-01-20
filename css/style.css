@@ -169,8 +169,17 @@ p {
 	padding: 20px 0 20px 20px;
 	margin: 0 0 0 0;
 	line-height: 1.5;
+	font-size: 80%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+.small {
+	font-size: 60%;
+	text-align: center !important;
+	position: relative;
+	display:inline-block;
+	width:100%;
+	top: -20px;
 }
 .scroller {
   overflow-y: scroll;
@@ -367,4 +376,9 @@ p {
 @keyframes statusanim {
 	0%   { top: 256px; left: 256px;}
 	100% {top: 0; left: 0;}
+}
+video {
+	border: 5px solid var(--accent);
+	height: 70%;
+	width: 98.5%;
 }
