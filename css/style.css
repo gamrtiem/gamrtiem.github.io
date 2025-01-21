@@ -357,3 +357,12 @@ video {
 	height: 70%;
 	width: 98.5%;
 }
+#atabook {
+	border: 5px solid var(--accent);
+	overflow-y: scroll;
+	scrollbar-color: #F3D2F7 #1d1d1d !important;
+	margin-top: -40px;
+	float: right;
+	height: 460px;
+	width:400px;
+}
