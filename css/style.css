@@ -260,69 +260,44 @@ p {
 
 
 /* note to optimize these; can just be a big class with ids being the changes */
-
+.box {
+	border: 15px solid white;
+	position: absolute;
+	color: #F3D2F7;
+	animation: rainbow 1s linear infinite;
+	pointer-events: none;
+	z-index: 1000
+}
 #box {
-  border: 15px solid white;
-  opacity: 0.5;
-  position: absolute;
-  left: var(--mouseposx);
-  top: var(--mouseposy);
-  color: #F3D2F7;
-  animation: rainbow 1s linear infinite;
-  pointer-events: none;
-  z-index: 1000
+	opacity: 0.5;
+  	left: var(--mouseposx);
+  	top: var(--mouseposy);
 }
 
-
-
 #box2 {
-  border: 15px solid white;
   opacity: 0.4;
-  position: absolute;
   left: var(--mouseposx1);
   top: var(--mouseposy1);
-  color: #F3D2F7;
-  animation: rainbow 1s linear infinite;
-  pointer-events: none;
-  z-index: 1000
 }
 
 
 #box3 {
-  border: 15px solid white;
   opacity: 0.3;
-  position: absolute;
   left: var(--mouseposx2);
   top: var(--mouseposy2);
-  color: #F3D2F7;
-  animation: rainbow 1s linear infinite;
-  pointer-events: none;
-  z-index: 1000
 }
 
 
 #box4 {
-  border: 15px solid white;
   opacity: 0.2;
-  position: absolute;
   left: var(--mouseposx3);
   top: var(--mouseposy3);
-  color: #F3D2F7;
-  animation: rainbow 1s linear infinite;
-  pointer-events: none;
-  z-index: 1000
 }
 
 #box5 {
-  border: 15px solid white;
   opacity: 0.1;
-  position: absolute;
   left: var(--mouseposx4);
   top: var(--mouseposy4);
-  color: #F3D2F7;
-  animation: rainbow 1s linear infinite;
-  pointer-events: none;
-  z-index: 1000
 }
 
 @keyframes rainbow {
