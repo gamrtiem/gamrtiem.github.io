@@ -14,15 +14,16 @@
 			/* horizontal */
 			background: none;
 		}
-		#badgehover {
+		.badgehover {
 			height: 5%;
 			transform-origin: center;
-			transition: 0.26s ease;
+			transition: 0.5s ease;
 			animation: none;
 		}
-		#badgehover:hover {
+		.badgehover:hover {
 			height: 10%;
-			transition: 0.26s ease;
+			transform: rotateZ(360deg);
+			transition: 0.5s ease;
 		}
 		@keyframes boining {
 			0%   {transform: scale(1)}
@@ -36,7 +37,9 @@
 <div id="topsect"></div>
 <div id="bottom" class="scroller">
 	<div id="osaka">
-		<a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button6.gif" id="badgehover"></a>
+		<a href="https://nekoweb.org/"><img class="badgehover" src="https://nekoweb.org/assets/buttons/button6.gif"></a>
+		<a href="https://gifypet.neocities.org/"><img class="badgehover"src="https://gifypet.neocities.org/images/badge.gif"></a>
+		<a href="https://textures.neocities.org"><img class="badgehover" src="https://gifypet.neocities.org/images/textown-badge.gif"></a>
 	</div>
 </div>
 <div id="status"></div>
