@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta name="darkreader-lock">
-		<script src="../javascript/base.js"    > </script>
-		<script src="../javascript/cursor.js"> </script>
-		<script src="../javascript/cookieAbout.js"> </script>
-		<script src="../javascript/harharharhaarhaar.js"> </script>
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
-		<title> about heaven! </title>
-		
-		<meta content="icebro dot party" property="og:title" />
-		<meta content="the awesome cool epic awesome !!" property="og:description" />
-		<meta content="https://icebro.party" property="og:url" />
-		<meta content="https://icebro.party/images/him.png" property="og:image" />
-		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
-		<meta name="twitter:card" content="summary">
-
-		<style>
-			#osaka {
+<html lang="en">
+<head>
+	<script src="../javascript/jquery-3.7.1.min.js"></script>
+	<div id="header"></div>
+	<title> about heaven! </title>
+	<style>
+		#osaka {
 			width: 100%;
 			height: 100%;
 			display: flex;
@@ -28,63 +14,35 @@
 			/* horizontal */
 			background: none;
 		}
-		#badgehover:hover {
-			animation: boining 1s ease-in-out infinite;
-			transition: 0s ease-out;
+		.badgehover {
+			height: 5%;
+			transform-origin: center;
+			transition: 0.5s ease;
+			animation: none;
+		}
+		.badgehover:hover {
+			height: 10%;
+			transform: rotateZ(360deg);
+			transition: 0.5s ease;
 		}
 		@keyframes boining {
- 			0%   {height:100%}
- 			50%  {height:0%}
- 			100% {height:100%}
+			0%   {transform: scale(1)}
+			50%  {transform: scale(2)}
+			100% {transform: scale(1)}
 		}
+	</style>
+</head>
 
-		</style>
-	</head>
-	<body>
-	<div class="behindall"></div>
-
-	<img src="../images/fastbear.jpeg" class="fastbear" id="fastbear">
-	<img src="../images/fasetbear.jpeg" class="fastbear" id="fasetbear">
-	<img src="../images/faestbear.png" class="fastbear" id="faestbear">
-	<audio src="../sfx/fnafambiance.mp3" id="harharharharhaarhaar"></audio>
-	<div class="box" id="box"></div>
-	<div class="box"  id="box2"></div>
-	<div class="box"  id="box3"></div>
-	<div class="box"  id="box4"></div>
-	<div class="box"  id="box5"></div>
-		<div id="top"> 
-			<!-- the brothers -->
-			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: right;">
-			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: left;">
-			<center>
-						<span class="wave" >
-				<span> i </span>
-				<span> c </span>
-				<span> e </span>
-				<span> b </span>
-				<span> r </span>
-				<span> o </span>
-			</span>
-			</center>
-			<div id="container">
-			<a href="https://icebro.party"id="homelink"> home </a>
-			<a href="https://icebro.party/projects"id="projectslink"> projects </a>
-			<a href="https://icebro.party/about"id="aboutlink"> about </a>
-			</div>
-		</div>
-		<div id="bottom" class="scroller">
-			<div id="osaka">
-				<a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button6.gif" id="badgehover"></a>
-			</div>
-		</div>
-	<div id="behind silly box" style="position:absolute; bottom: 5px; right: 5px; width:395px;">
-		<div id="behindstatus"></div>
+<body>
+<div id="topsect"></div>
+<div id="bottom" class="scroller">
+	<div id="osaka">
+		<a href="https://nekoweb.org/"><img class="badgehover" src="https://nekoweb.org/assets/buttons/button6.gif"></a>
+		<a href="https://gifypet.neocities.org/"><img class="badgehover"src="https://gifypet.neocities.org/images/badge.gif"></a>
+		<a href="https://textures.neocities.org"><img class="badgehover" src="https://gifypet.neocities.org/images/textown-badge.gif"></a>
 	</div>
-	<div  id="silly box" style="position:absolute; bottom: 5px; right: 5px; width:390px;">
-		<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=icebro" defer></script>
-	</div>
-		<script src="../javascript/kabeewm !.js"> </script>
-	</body>
-	<script src="../javascript/post.js"> </script>
-
+</div>
+<div id="status"></div>
+</body>
+<script src="../javascript/post.js"> </script>
 </html>

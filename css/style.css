@@ -25,7 +25,7 @@
 	--harhar4:none;
 	--border-color: transparent;
 	--statusHeight: 0px;
-	--topMask: calc(100% - var(--statusHeight))
+	--topMask: calc(100% - var(--statusHeight));
 }
 
 @font-face {
@@ -81,9 +81,8 @@ html{
     height: 100%;
 	overflow: hidden;
 	color:white;
-	background: var(--border-color);
+	background: linear-gradient(#eeeeee, #d87de3);
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), auto;
-
 }
 body{
 	margin:5px;
@@ -340,7 +339,6 @@ p {
 	top: 0;
 	left: 0;
 	background-image: url('../images/stars purp different.gif.gif');
-	background-color: var(--accent);
 	animation: bganim 12s linear infinite;
 }
 
