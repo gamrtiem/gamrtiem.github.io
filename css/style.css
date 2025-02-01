@@ -75,10 +75,20 @@ table.player {
 	mask-composite: exclude;
 	clip-path: polygon(100% 0, 100% var(--topMask), calc(100% - 395px) var(--topMask), calc(100% - 395px) 100%, 0 100%, 0 0);
 }
-html{ 
-    padding: 0;
-    width: 100%; 
-    height: 100%;
+#mainframe {
+	margin-top:5px;
+	width:var(--width);
+	height: calc(var(--bottomHeight) + 5px);
+	background-color:var(--boxBackgroundColor);
+	box-sizing: content-box;
+	background-image: url('../images/stars dark different.gif.gif');
+	mask-composite: exclude;
+	clip-path: polygon(100% 0, 100% var(--topMask), calc(100% - 395px) var(--topMask), calc(100% - 395px) 100%, 0 100%, 0 0);
+}
+html{
+	padding: 0;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 	color:white;
 	background: linear-gradient(#eeeeee, #d87de3);

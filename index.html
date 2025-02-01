@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 
@@ -21,6 +20,7 @@
 	<meta content="https://icebro.party/images/him.png" property="og:image" />
 	<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
 	<meta name="twitter:card" content="summary">
+
 </head>
 
 <body>
@@ -55,26 +55,9 @@
 		</div>
 	</div>
 
+	<div id="frameOverlay" style="width: 100%; height: 100%; position: absolute; z-index: 0;"></div>
+	<iframe src="./_posts/2014-3-3-about2.html" name="frame" id="mainframe" style="border: none; margin: 0 0 0 0; z-index: 1;"></iframe>
 
-	<div id="bottom" class="scroller">
-		<p>
-			swaggy !!!!!!! <br>
-			<iframe id="atabook" class="scroller" src="https://icebro.atabook.org/?page=1"></iframe>
-			<!--span class="small" style="float: right; top: calc(15% + 550px); left: calc(100% - 550px); position: absolute"> sign the guestbook !!!</span-->
-
-			<br>
-
-			<a href="https://icebro.party/gambling"> gambling !!!!!!! </a>
-			<br><br><br><br> <!-- me when i am cold --> <br><br><br><br>
-			<a href="https://icebro.party/changelog"> changes !!!!!!! </a>
-			<br>
-			<br>
-			<br>
-			<div id="stars"></div>
-			<br>
-			<br>
-			<!--button class="button" style="margin-left:10px;" id="kabeewmm" onclick="kabeewm()">kabeewm ?</button-->
-	</div>
 	<div id="behind silly box" style="position:absolute; bottom: 5px; right: 5px; width:395px;">
 		<div id="behindstatus"></div>
 	</div>
@@ -124,6 +107,32 @@
 
 		}
 	</script-->
+	<script>
+		// This example assumes execution from the parent of the the iframe
+
+		var bubbleIframeMouseMove = function( iframe ){
+			iframe.contentWindow.addEventListener('mousemove', function( event ) {
+				var boundingClientRect = iframe.getBoundingClientRect();
+
+				var evt = new CustomEvent( 'mousemove', {bubbles: true, cancelable: false})
+				evt.clientX = event.clientX + boundingClientRect.left;
+				evt.clientY = event.clientY + boundingClientRect.top;
+
+				console.log(evt.clientY)
+				console.log(evt.clientX)
+
+				rainbow(evt.clientX, evt.clientY)
+
+				iframe.dispatchEvent( evt );
+			});
+		};
+
+		// Get the iframe element we want to track mouse movements on
+		var myIframe = document.getElementById("mainframe");
+
+		// Run it through the function to setup bubbling
+		bubbleIframeMouseMove(myIframe);
+	</script>
 </body>
 <script src="javascript/statusborder.js"> </script>
 </html>
