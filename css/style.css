@@ -76,9 +76,8 @@ table.player {
 	clip-path: polygon(100% 0, 100% var(--topMask), calc(100% - 395px) var(--topMask), calc(100% - 395px) 100%, 0 100%, 0 0);
 }
 #mainframe {
-	margin-top:5px;
 	width:var(--width);
-	height: calc(var(--bottomHeight) + 5px);
+	height: calc(var(--bottomHeight));
 	background-color:var(--boxBackgroundColor);
 	box-sizing: content-box;
 	background-image: url('../images/stars dark different.gif.gif');
@@ -178,7 +177,6 @@ p {
 	padding: 20px 0 20px 20px;
 	margin: 0 0 0 0;
 	line-height: 1.5;
-	font-size: 80%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

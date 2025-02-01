@@ -10,16 +10,12 @@ onmousemove = function(e) {
 
 
 
-	console.log("mouse location:", x, y);
 		if(!isNaN(e.pageX) && !isNaN(e.pageY)) {
 			rainbow(x, y)
 		}
 }
 
 rainbow = function (x, y) {
-
-		console.log(x + " " + y)
-
 		function mouse1() {
 			r.style.setProperty('--mouseposy', y);
 			r.style.setProperty('--mouseposx', x);

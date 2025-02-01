@@ -20,9 +20,3 @@ let h = document.getElementById("statuscafe");
 
     console.log(h)
     new ResizeObserver(outputsize).observe(h)
-
-    const iframeStyle = document.getElementById("atabook");
-
-    const style = document.createElement('style')
-
-    iframeStyle.styleSheet = "https://icebro.party/css/style.css"
