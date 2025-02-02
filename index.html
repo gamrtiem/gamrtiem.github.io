@@ -56,7 +56,7 @@
 	</div>
 
 	<div id="frameOverlay" style="width: 100%; height: 100%; position: absolute; z-index: 0;"></div>
-	<iframe src="./about2" name="frame" id="mainframe" style="border: none; margin-top: 5px; z-index: 1;" onLoad="bubbleIframeMouseMove(document.getElementById('mainframe'));"></iframe>
+	<iframe src="./home" name="frame" id="mainframe" style="border: none; margin-top: 5px; z-index: 1;" onLoad="bubbleIframeMouseMove(document.getElementById('mainframe'));"></iframe>
 
 	<div id="behind silly box" style="position:absolute; bottom: 5px; right: 5px; width:395px;">
 		<div id="behindstatus"></div>
@@ -137,7 +137,7 @@
 		}
 
 		currentUrl = getSecondPart(currentUrl);
-		if(!(currentUrl === undefined)){
+		if(!(currentUrl === undefined) && currentUrl !== "home"){
 			console.log("currenturl = " + currentUrl);
 			myIframe.src = "https://icebro.party/" + currentUrl;
 		}
