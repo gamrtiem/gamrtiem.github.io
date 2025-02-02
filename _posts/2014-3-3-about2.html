@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script>
+			if(parent.myIframe === undefined){
+				//alert("sdgojnskfjghbdfjkgn");
+				window.location.replace("../index.html#about2");
+			}
+			parent.document.title = 'abouting !!!!!!!!';
+			parent.history.replaceState('data to be passed', 'Title of the page', '/about2');
+		</script>
 		<meta name="darkreader-lock">
 		<script src="../javascript/base.js"> </script><link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
 		<title> about heaven! </title>
@@ -18,14 +26,6 @@
 				height: 100%;
 			}
 		</style>
-		<script>
-			if(parent.myIframe === undefined){
-				//alert("sdgojnskfjghbdfjkgn");
-				window.location.replace("../index.html#about2");
-			}
-			parent.document.title = 'abouting !!!!!!!!';
-			parent.history.replaceState('data to be passed', 'Title of the page', '/about2');
-		</script>
 		<meta content="icebro dot party" property="og:title" />
 		<meta content="the awesome cool epic awesome !!" property="og:description" />
 		<meta content="https://icebro.party" property="og:url" />
