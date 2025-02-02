@@ -1,54 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="../css/loading.css">
+		<script>
+			if(parent.myIframe === undefined){
+				//alert("sdgojnskfjghbdfjkgn");
+				window.location.replace("../index.html#funandgames");
+			}
+			parent.document.title = ' fun and games !!! ';
+			parent.history.replaceState('data to be passed', 'Title of the page', '/funandgames');
+		</script>
 		<meta name="darkreader-lock">
-		<script src="../javascript/base.js"    > </script>
-		<script src="../javascript/cursor.js"> </script>
-		<script src="../javascript/harharharhaarhaar.js"> </script>
-		<link rel="stylesheet" href="../css/style.css">
 		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
-		<title> fun and games !!! </title>
-		
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/iframe.css">
 		<meta content="icebro dot party" property="og:title" />
 		<meta content="the awesome cool epic awesome !!" property="og:description" />
 		<meta content="https://icebro.party" property="og:url" />
-		<meta content="https://icebro.party/images/him.png" property="og:image" />
+		<meta content="https://icebro.party/images/6BF708F0-C17E-4CD0-950A-81944578C27A.png" property="og:image" />
 		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
 		<meta name="twitter:card" content="summary">
 	</head>
 	<body>
-	<div class="behindall"></div>
-
-	<img src="../images/fastbear.jpeg" class="fastbear" id="fastbear">
-	<img src="../images/fasetbear.jpeg" class="fastbear" id="fasetbear">
-	<img src="../images/faestbear.png" class="fastbear" id="faestbear">
-	<audio src="../sfx/fnafambiance.mp3" id="harharharharhaarhaar"></audio>
-	<div class="box" id="box"></div>
-	<div class="box"  id="box2"></div>
-	<div class="box"  id="box3"></div>
-	<div class="box"  id="box4"></div>
-	<div class="box"  id="box5"></div>
-		<div id="top"> 
-			<!-- the brothers -->
-			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: right;">
-			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: left;">
-			<center>
-			<span class="wave" >
-				<span> i </span>
-				<span> c </span>
-				<span> e </span>
-				<span> b </span>
-				<span> r </span>
-				<span> o </span>
-			</span>
-			</center>
-			<div id="container">
-			<a href="https://icebro.party"id="homelink"> home </a>
-			<a href="https://icebro.party/projects"id="projectslink"> projects </a>
-			<a href="https://icebro.party/about"id="aboutlink"> about </a>
-			</div>
-		</div>
-		<div id="bottom" >
+		<div id="bottom" class="scroller">
 			<desmond-player></desmond-player>
 			<script src="https://js-emulators.github.io/desmond/dist/desmond.min.js"></script>
 			<script>
@@ -62,15 +36,5 @@
 				}
 			</script>
 		</div>
-		<div id="behind silly box" style="position:absolute; bottom: 5px; right: 5px; width:395px;">
-			<div id="behindstatus"></div>
-		</div>
-		<div  id="silly box" style="position:absolute; bottom: 5px; right: 5px; width:390px;">
-			<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=icebro" defer></script>
-		</div>
 	</body>
-	<script src="../javascript/post.js"> </script>
-
-
-
 </html>
