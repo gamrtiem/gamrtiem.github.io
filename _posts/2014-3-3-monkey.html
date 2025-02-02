@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/loading.css">
+		<script>
+			if(parent.myIframe === undefined){
+				//alert("sdgojnskfjghbdfjkgn");
+				window.location.replace("../index.html#funandgames");
+			}
+			parent.document.title = ' fun and games !!! ';
+			parent.history.replaceState('data to be passed', 'Title of the page', '/funandgames');
+		</script>
+		<meta name="darkreader-lock">
+		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/iframe.css">
+		<meta content="icebro dot party" property="og:title" />
+		<meta content="the awesome cool epic awesome !!" property="og:description" />
+		<meta content="https://icebro.party" property="og:url" />
+		<meta content="https://icebro.party/images/6BF708F0-C17E-4CD0-950A-81944578C27A.png" property="og:image" />
+		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
+		<meta name="twitter:card" content="summary">
+	</head>
+	<body>
+		<div id="bottom" class="scroller">
+			<desmond-player></desmond-player>
+			<script src="https://js-emulators.github.io/desmond/dist/desmond.min.js"></script>
+			<script>
+
+				window.onload = function() {
+					setTimeout(function() {
+						document.querySelector("desmond-player").loadURL("../images/monkeyball.nds")
+						document.querySelector("desmond-player").shadowRoot.querySelector("#top").style = "position: fixed;transform: translate(-50%, -30%);left: 50%;top: 29.99999%;height: 35%;";
+						document.querySelector("desmond-player").shadowRoot.querySelector("#bottom").style = "position: fixed;transform: translate(-50%, -30%);left: 50%;top: 65%;height: 35%;";
+					}, 1000)
+				}
+			</script>
+		</div>
+	</body>
+</html>
