@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="../css/loading.css">
+		<script>
+			if(parent.myIframe === undefined){
+				//alert("sdgojnskfjghbdfjkgn");
+				window.location.replace("../index.html#gambling");
+			}
+			parent.document.title = 'converge!';
+			parent.history.replaceState('data to be passed', 'Title of the page', '/gambling');
+		</script>
 		<meta name="darkreader-lock">
-		<script src="../javascript/base.js"    > </script>
-		<script src="../javascript/cursor.js"> </script>
-		<script src="../javascript/gambling.js"> </script>
-		<script src="../javascript/cookieGambling.js"> </script>
-		<script src="../javascript/harharharhaarhaar.js"> </script>
-		<link rel="stylesheet" href="../css/style.css">
 		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
-		<title> converge! </title>
-		
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/iframe.css">
 		<meta content="icebro dot party" property="og:title" />
 		<meta content="the awesome cool epic awesome !!" property="og:description" />
 		<meta content="https://icebro.party" property="og:url" />
-		<meta content="https://icebro.party/images/him.png" property="og:image" />
+		<meta content="https://icebro.party/images/6BF708F0-C17E-4CD0-950A-81944578C27A.png" property="og:image" />
 		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
 		<meta name="twitter:card" content="summary">
 	</head>
 	<body>
-	<div class="behindall"></div>
-
-	<img src="../images/fastbear.jpeg" class="fastbear" id="fastbear">
-	<img src="../images/fasetbear.jpeg" class="fastbear" id="fasetbear">
-	<img src="../images/faestbear.png" class="fastbear" id="faestbear">
-	<audio src="../sfx/fnafambiance.mp3" id="harharharharhaarhaar"></audio>
-	<div class="box" id="box"></div>
-	<div class="box"  id="box2"></div>
-	<div class="box"  id="box3"></div>
-	<div class="box"  id="box4"></div>
-	<div class="box"  id="box5"></div>
-		<div id="top"> 
-			<!-- the brothers -->
-			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: right;">
-			<img src="https://icebro.party/images/bleh.gif" style="height:100%; float: left;">
-			<center>
-			<span class="wave" >
-				<span> i </span>
-				<span> c </span>
-				<span> e </span>
-				<span> b </span>
-				<span> r </span>
-				<span> o </span>
-			</span>
-			</center>
-			<div id="container">
-			<a href="https://icebro.party"id="homelink"> home </a>
-			<a href="https://icebro.party/projects"id="projectslink"> projects </a>
-			<a href="https://icebro.party/about"id="aboutlink"> about </a>
-			</div>
-		</div>
 		<div id="bottom" class="scroller">
 			<p> turn them all on for maximum sensory overload !!!!!!!!!!!!!!! </p>
 			<button class="button" onclick="PlayAllFunction()" style="margin-bottom:10px; margin-left:10px;"> play all (will be loud. like actually turn your volume down !!) </button>
@@ -57,105 +29,105 @@
 			<button class="button" onclick="LoopAllFunction()"> loop all </button>
 			<button class="button" onclick="TurnDownAllFunction()" style="margin-bottom:10px;"> turn down all </button>
 			<button class="button" onclick="TurnUpAllFunction()" style="margin-bottom:10px;"> turn up all </button>
-			
-			
-			
-			
-			
+
+
+
+
+
 
 			<table class="player" style="margin-left:10px;">
 				<th>
 					<p id="media"> kaching sfx </p>
 					<audio id="player" src="../sfx/Cash Register Sound Effect [ZeET7Z1ZGlw].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button"  onclick="PlayFunction()">Play</button>
 						<a id="time" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunction()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunction()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunction()"><p id="loop" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunction()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunction()">Vol +</button>
 						<a id="volume" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunction()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunction()">Vol -</button>
 					</div>
 				</th>
 			</table>
-			
+
 			<table class="player" style="margin-left:10px;">
 				<th>
 					<p id="media"> YEAH BABY THATS WHAT IM <br>WAITING FOR THATS WHAT <br>ITS ALL ABOUT</p>
 					<audio id="playerA" src="../sfx/Casino Jackpot - Sound Effect [hrmdd76WPzQ].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionA()">Play</button>
 						<a id="timeA" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionA()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionA()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionA()"><p id="loopA" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2A"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionA()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionA()">Vol +</button>
 						<a id="volumeA" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionA()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionA()">Vol -</button>
 					</div>
 				</th>
 			</table>
-			
-			
+
+
 			<table class="player" style="margin-left:10px;">
 				<th>
 					<p id="media"> i have no idea how to describe </p>
 					<audio id="playerB" src="../sfx/120 Essential Casino & Gambling Sound FX [Znwz6tfIxnc].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionB()">Play</button>
 						<a id="timeB" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionB()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionB()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionB()"><p id="loopB" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2B"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionB()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionB()">Vol +</button>
 						<a id="volumeB" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionB()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionB()">Vol -</button>
 					</div>
 				</th>
 			</table>
-			
+
 			<table class="player" style="margin-left:10px;">
 				<th>
 					<p id="media"> gambling game but its a mp3</p>
 					<audio id="playerC" src="../sfx/Classic fruits slot machine sound - soundtrack by slotsound.com [55r-UpnYUm4].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionC()">Play</button>
 						<a id="timeC" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionC()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionC()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionC()"><p id="loopC" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2C"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionC()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionC()">Vol +</button>
 						<a id="volumeC" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionC()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionC()">Vol -</button>
 					</div>
 				</th>
 			</table>
-			
+
 			<table class="player" style="margin-left:10px;">
 				<th>
 					<p id="media"> several </p>
 					<audio id="playerD" src="../sfx/Gambling Casino Sound Effects ⧸ All Jackpot Winning Sounds ⧸ Best Las Vegas Casino Gambling Sounds [WKuLKUIrII4].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionD()">Play</button>
 						<a id="timeD" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionD()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionD()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionD()"><p id="loopD" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2D"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionD()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionD()">Vol +</button>
 						<a id="volumeD" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionD()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionD()">Vol -</button>
 					</div>
 				</th>
 			</table>
-			
+
 			<table class="player" style="margin-left:10px;">
 				<th>
 					<p id="media"> test your luck !!</p>
 					<audio id="playerE" src="../sfx/Slot Machine Sound Effects Kit [ecp84TWYyV0].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionE()">Play</button>
 						<a id="timeE" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionE()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionE()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionE()"><p id="loopE" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2E"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionE()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionE()">Vol +</button>
 						<a id="volumeE" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionE()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionE()">Vol -</button>
 					</div>
 				</th>
 			</table>
@@ -164,14 +136,14 @@
 				<th>
 					<p id="media"> nine minutes of sounds  </p>
 					<audio id="playerF" src="../sfx/WMS CPU-NXT 3 slot machines generic win soundtrack pack [Q949tP9yO4M].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionF()">Play</button>
 						<a id="timeF" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionF()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionF()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionF()"><p id="loopF" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2F"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionF()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionF()">Vol +</button>
 						<a id="volumeF" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionF()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionF()">Vol -</button>
 					</div>
 				</th>
 			</table>
@@ -180,14 +152,14 @@
 				<th>
 					<p id="media"> you haveth woneth !! </p>
 					<audio id="playerG" src="../sfx/🎵Aristocrat Technologies Slot Machines Soundtrack - Big Win [xw9NVRfJkZ4].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionG()">Play</button>
 						<a id="timeG" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionG()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionG()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionG()"><p id="loopG" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2G"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionG()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionG()">Vol +</button>
 						<a id="volumeG" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionG()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionG()">Vol -</button>
 					</div>
 				</th>
 			</table>
@@ -196,27 +168,17 @@
 				<th>
 					<p id="media"> tbh they did not have to go THIS hard</p>
 					<audio id="playerH" src="../sfx/🎵WMS G+ Deluxe Slot Machines Soundtrack - Mega Big Win [t1ELUU-LdQQ].mp3"></audio>
-					<div> 
+					<div>
 						<button class="button" style="margin-left:10px;" onclick="PlayFunctionH()">Play</button>
 						<a id="timeH" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="PauseFunctionH()">Pause</button> 
+						<button class="button" style="margin-left:10px;" onclick="PauseFunctionH()">Pause</button>
 						<button class="button" style="margin-left:20px;" onclick="LoopFunctionH()"><p id="loopH" style="margin-bottom:0px;margin-top:0px;">loop</p><a id="loop2H"></a></button>
-						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionH()">Vol +</button> 
+						<button class="button" style="margin-left:20px;" onclick="VolumeUpFunctionH()">Vol +</button>
 						<a id="volumeH" style="margin-right:-10px;"> </a>
-						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionH()">Vol -</button> 
+						<button class="button" style="margin-left:10px;" onclick="VolumeDownFunctionH()">Vol -</button>
 					</div>
 				</th>
 			</table>
 		</div>
-	<div id="behind silly box" style="position:absolute; bottom: 5px; right: 5px; width:395px;">
-		<div id="behindstatus"></div>
-	</div>
-	<div  id="silly box" style="position:absolute; bottom: 5px; right: 5px; width:390px;">
-		<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=icebro" defer></script>
-	</div>
-				<script src="../gambling.js"> </script>
-				<script src="../javascript/kabeewm !.js"> </script>
 	</body>
-	<script src="../javascript/post.js"> </script>
-
 </html>
