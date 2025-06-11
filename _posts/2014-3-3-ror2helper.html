@@ -22,19 +22,24 @@
 		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
 		<meta name="twitter:card" content="summary">
 		<style>
+			@font-face {
+				font-family: "bombardier";
+				src: url("../images/fonts/BOMBARD_.ttf");
+			}
 			#input {
-				width: 90%;
+				width: calc(100% - 20px);
 				height: 100px;
 				font-size: 30px;
-				font-family: Bombardier;
+				font-family: "bombardier" !important;
 				margin: 10px;
 				box-sizing: border-box;
 			}
 			#output {
-				font-family: Bombardier;
+				font-family: "bombardier" !important;
 			}
 			button {
-				background-color: #1d1d1d;
+				font-family: "bombardier" !important;
+				font-size: 20px !important;
 			}
 			#newline {
 				color: #99ff99;
@@ -122,7 +127,7 @@
 			</div>
 			<textarea id="input"></textarea>
 			<br>
-			<span id="buttons">
+			<div id="buttons">
 				<button onclick="styleText('cIsHealth')" class="cIsHealth">cIsHealth</button>
 				<button onclick="styleText('cIsDamage')" class="cIsDamage">cIsDamage</button>
 				<button onclick="styleText('cIsHealing')" class="cIsHealing">cIsHealing</button>
@@ -139,14 +144,25 @@
 				<button onclick="styleText('cEvent')" class="cEvent">cEvent</button>
 				<button onclick="styleText('cHumanObjective')" class="cHumanObjective">cHumanObjective</button>
 				<button onclick="styleText('cLunarObjective')" class="cLunarObjective">cLunarObjective</button>
-
+				<br><br>
 				<button onclick="undo()" style="color: #eeeeee">undo</button>
-				<button onclick="newline()" id="newline">new line is new line? (for log formatting( uses when false \n instead</button>
-			</span>
+				<button onclick="newline()" id="newline">new line is new line? (for log formatting( uses \n when false instead</button>
+				<button onclick="example()" id="example">example item desc (coffee bag ss2 !!</button>
+			</div>
+			<div>
+				<p>
+					select something in the dialog box then click one of the buttons above to style it!!!!!<br>
+				</p>
+			</div>
 		</div>
 		<script>
 			let historyarray = [];
 			let newlineisnewline = true;
+			function example(){
+				var text = document.getElementById('input');
+				text.value = "<style=cIsDamage>8%</style> chance on hit to drop a coffee bean that grants <style=cIsDamage>8% attack speed</style> and <style=cIsUtility>movement speed</style> for <style=cIsUtility>5</style> <style=cStack>(+5 per stack)</style> <style=cIsUtility>seconds</style>.";
+				formattext();
+			}
 			function styleText(string) {
 				var text = document.getElementById('input');
 

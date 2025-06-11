@@ -50,14 +50,13 @@ table.player {
 	margin-bottom:20px;
 	
 }
-.button{
+button{
 	border:2px solid var(--accent);
 	background-color: #1d1d1d;
 	background-image: url('../images/stars dark different.gif.gif');
 	color: white;
 	cursor:url(https://raw.githubusercontent.com/gamrtiem/gamrtiem.github.io/master/images/ezgif-1-b691d279d8.gif), auto;
 	font-family: "determination";
-
 }
 #top {
 	width:var(--width);
