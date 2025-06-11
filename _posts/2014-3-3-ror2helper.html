@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/loading.css">
+		<script>
+			if(parent.myIframe === undefined){
+				//alert("sdgojnskfjghbdfjkgn");
+				window.location.replace("../index.html#ror2helper");
+			}
+			parent.document.title = 'risk of rain 2 lang helper !!!!!';
+			parent.history.replaceState('data to be passed', 'Title of the page', '/ror2helper');
+		</script>
+
+		<meta name="darkreader-lock">
+		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/iframe.css">
+		<meta content="icebro dot party" property="og:title" />
+		<meta content="the awesome cool epic awesome !!" property="og:description" />
+		<meta content="https://icebro.party" property="og:url" />
+		<meta content="https://icebro.party/images/6BF708F0-C17E-4CD0-950A-81944578C27A.png" property="og:image" />
+		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
+		<meta name="twitter:card" content="summary">
+		<style>
+			#input {
+				width: 90%;
+				height: 100px;
+				font-size: 30px;
+				font-family: Bombardier;
+				margin: 10px;
+				box-sizing: border-box;
+			}
+			#output {
+				font-family: Bombardier;
+			}
+			button {
+				background-color: #1d1d1d;
+			}
+			#newline {
+				color: #99ff99;
+			}
+			#buttons {
+				margin: 40px;
+			}
+		</style>
+		<style>
+			/* copied from https://xuerian.github.io/RoR2LanguageEditor/ sowwy !! */
+			.cIsHealth {
+				color: #e58262;
+			}
+
+			.cIsDamage {
+				color: #e5c962;
+			}
+
+			.cIsHealing {
+				color: #9ce562;
+			}
+
+			.cIsUtility {
+				color: #95cde5;
+			}
+
+			.cIsVoid {
+				color: #DD7AC6;
+			}
+
+			.cStack {
+				color: #8990a7;
+			}
+
+			.cWorldEvent {
+				color: #ffc9f5;
+			}
+
+			.cArtifact {
+				color: #8a5bc0;
+			}
+
+			.cUserSetting {
+				color: #ffffd0;
+			}
+
+			.cDeath {
+				color: #fe7c7c;
+			}
+
+			.cSub {
+				color: #ccd3e0;
+			}
+
+			.cMono {
+				color: #8990a7;
+				letter-spacing: .5em;
+				line-height: 1.3em;
+			}
+
+			.cShrine {
+				color: #efeb1c;
+			}
+
+			.cEvent {
+				color: #8394b3;
+			}
+
+			.cHumanObjective {
+				color: #e4ef82;
+			}
+
+			.cLunarObjective {
+				color: #b2b8ee;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bottom" class="scroller">
+			<div>
+				<span style=""></span>
+				<p id="output">
+					im a chuckster !
+				</p>
+			</div>
+			<textarea id="input"></textarea>
+			<br>
+			<span id="buttons">
+				<button onclick="styleText('cIsHealth')" class="cIsHealth">cIsHealth</button>
+				<button onclick="styleText('cIsDamage')" class="cIsDamage">cIsDamage</button>
+				<button onclick="styleText('cIsHealing')" class="cIsHealing">cIsHealing</button>
+				<button onclick="styleText('cIsUtility')" class="cIsUtility">cIsUtility</button>
+				<button onclick="styleText('cIsVoid')" class="cIsVoid">cIsVoid</button>
+				<button onclick="styleText('cStack')" class="cStack">cStack</button>
+				<button onclick="styleText('cWorldEvent')" class="cWorldEvent">cWorldEvent</button>
+				<button onclick="styleText('cArtifact')" class="cArtifact">cArtifact</button>
+				<button onclick="styleText('cUserSetting')" class="cUserSetting">cUserSetting</button>
+				<button onclick="styleText('cDeath')" class="cDeath">cDeath</button>
+				<button onclick="styleText('cSub')" class="cSub">cSub</button>
+				<button onclick="styleText('cMono')" class="cMono">cMono</button>
+				<button onclick="styleText('cShrine')" class="cShrine">cShrine</button>
+				<button onclick="styleText('cEvent')" class="cEvent">cEvent</button>
+				<button onclick="styleText('cHumanObjective')" class="cHumanObjective">cHumanObjective</button>
+				<button onclick="styleText('cLunarObjective')" class="cLunarObjective">cLunarObjective</button>
+
+				<button onclick="undo()" style="color: #eeeeee">undo</button>
+				<button onclick="newline()" id="newline">new line is new line? (for log formatting( uses when false \n instead</button>
+			</span>
+		</div>
+		<script>
+			let historyarray = [];
+			let newlineisnewline = true;
+			function styleText(string) {
+				var text = document.getElementById('input');
+
+				var selection = text.value.substring(input.selectionStart, input.selectionEnd);
+				var preselection = text.value.substring(0, input.selectionStart);
+				var postselection = text.value.substring(input.selectionEnd, text.value.length);
+				console.log(selection);
+
+				if(selection !== ""){
+					text.value = preselection + "<style=\"" + string + "\">" + selection + "</style>" + postselection;
+					formattext()
+				}
+
+				if(historyarray[historyarray.length - 1] !== text.value || historyarray.length === 0){
+					historyarray.push(text.value);
+				}
+				console.log(historyarray);
+			}
+			document.getElementById('input').addEventListener('input', function (event) {
+				formattext()
+				var text = document.getElementById('input');
+
+				if(historyarray[historyarray.length - 1] !== text.value || historyarray.length === 0){
+					historyarray.push(text.value);
+				}
+				console.log(historyarray);
+
+			});
+			function newline(){
+				var text = document.getElementById('newline');
+				newlineisnewline = !newlineisnewline;
+				if(newlineisnewline)
+					text.style.color = "#99ff99";
+				else
+					text.style.color = "#ff9999";
+
+				formattext()
+			}
+
+			function formattext(){
+				var output = document.getElementById('output');
+				var text = document.getElementById('input');
+
+				var newtext = text.value
+				let count = 0;
+
+				while (newtext.search("</style>") !== -1) {
+					newtext = newtext.replace("</style>", "</span>");
+					count++;
+					if(count > 3000){
+						alert("infinite loop while formatting text (close style tag,.,.., oops !!");
+						return;
+					}
+				}
+				while (newtext.search("<style") !== -1) {
+					console.log(newtext.search("\"<style"));
+					newtext = newtext.replace("<style", "<span class");
+					count++;
+					if(count > 3000){
+						alert("infinite loop while formatting text (open style tag,.,.., oops !!");
+						return;
+					}
+				}
+				if(newlineisnewline)
+					while (newtext.search("\n") !== -1) {
+						console.log(newtext.search("\n"));
+						newtext = newtext.replace("\n", "<br>");
+						count++;
+						if(count > 3000){
+							alert("infinite loop while formatting text (new line,.,.., oops !!");
+							return;
+						}
+					}
+				else
+					while (newtext.indexOf("\\n") !== -1) {
+						newtext = newtext.replace("\\n", "<br>");
+						count++;
+						if(count > 3000){
+							alert("infinite loop while formatting text (new line \\n,.,.., oops !!");
+							return;
+						}
+					}
+
+				output.innerHTML = newtext;
+			}
+
+			function undo(){
+				var text = document.getElementById('input');
+				console.log(historyarray);
+				if (historyarray.length === 1) {
+					return;
+				}
+				text.value = historyarray[historyarray.length - 2];
+				historyarray.pop()
+				formattext()
+			}
+		</script>
+	</body>
+</html>
