@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/loading.css">
+		<script>
+			if(parent.myIframe === undefined){
+				//alert("sdgojnskfjghbdfjkgn");
+				window.location.replace("../index.html#loadoutthing");
+			}
+			parent.document.title = 'risk of rain 2 loadouts !!!!!';
+			parent.history.replaceState('data to be passed', 'Title of the page', '/loadoutthing');
+		</script>
+
+		<meta name="darkreader-lock">
+		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/iframe.css">
+		<meta content="icebro dot party" property="og:title" />
+		<meta content="the awesome cool epic awesome !!" property="og:description" />
+		<meta content="https://icebro.party" property="og:url" />
+		<meta content="https://icebro.party/images/6BF708F0-C17E-4CD0-950A-81944578C27A.png" property="og:image" />
+		<meta content="#EDD3F5" data-react-helmet="true" name="theme-color" />
+		<meta name="twitter:card" content="summary">
+		<style>
+			:root {
+				--rows: 4;
+				--columns: 8;
+			}
+			section {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				user-select: none;
+				display: grid;
+				grid-gap: 15px;
+				grid-template-rows: repeat(var(--rows), 100px);
+				grid-template-columns: repeat(var(--columns), 1fr);
+				/*   grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+                  grid-template-rows: repeat(5, 200px); */
+				grid-auto-flow: row dense;
+				min-height: 9vh;
+			}
+
+			.inside {
+				background-color: #1d1d1d;
+			}
+
+			.divQuad {
+				cursor: move;
+				padding: 35px 20px;
+				font-size: 20px;
+				background-color: #1d1d1d;
+				border-size: 1px;
+				border-style: solid;
+				background-repeat: no-repeat;
+
+				border-color: #eeeeee;
+
+				grid-area: span 1/span 1;
+			}
+
+			.ghost {
+				border: 1px dashed #000;
+				background-color: #fff;
+			}
+
+			.custom-drag-ghost {
+				/* The original cloned element must not take place up in the page and must not be visible */
+				position: absolute;
+				top: -99999px;
+				left: -99999px;
+				/* Just for appearance */
+				background-color: #edb458;
+				border: 1px solid #e8871e;
+			}
+
+			.hidden-drag-ghost {
+				opacity: 0;
+			}
+
+			.transition {
+				transition: all 2s ease-out .5s;
+				top: 0;
+			}
+			#input {
+				width: calc(100% - 20px);
+				height: 100px;
+				font-size: 20px;
+				font-family: "bombardier" !important;
+				margin: 10px;
+				box-sizing: border-box;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<div id="bottom" class="scroller">
+			<textarea id="rows">2</textarea>
+			<textarea id="columns">8</textarea>
+			<textarea id="default">CommandoBody:1, HuntressBody:2, Bandit2Body:3, ToolbotBody:4, EngiBody:5, MageBody:6, MercBody:7, TreebotBody:8, LoaderBody:9, CrocoBody:10, CaptainBody:11, HereticBody:13, RailgunnerBody:14, VoidSurvivorBody:15, SeekerBody:16, FalseSonBody:17, ChefBody:18</textarea>
+
+			<section id="list">
+				<div id='div1' class='divQuad'><div class='inside'>item 1</div></div>
+				<div id='div2' class='divQuad'><div class='inside'>item 2</div></div>
+				<div id='div3' class='divQuad'><div class='inside'>item 3</div></div>
+				<div id='div4' class='divQuad'><div class='inside'>item 4</div></div>
+				<div id='div5' class='divQuad'><div class='inside'>item 5</div></div>
+				<div id='div6' class='divQuad'><div class='inside'>item 6</div></div>
+				<div id='div7' class='divQuad'><div class='inside'>item 7</div></div>
+				<div id='div8' class='divQuad'><div class='inside'>item 8</div></div>
+			</section>
+		</div>
+	<script>
+
+		window.addEventListener("load", (event) => {
+			evil()
+		});
+
+		document.getElementById('rows').addEventListener('input', function (event) {
+			var text = document.getElementById('rows');
+			if(Number(text.value) !== 0)
+				document.documentElement.style.setProperty('--rows', Number(text.value));
+			else
+				document.documentElement.style.setProperty('--rows', 8);
+			console.log(rows);
+		});
+
+		document.getElementById('columns').addEventListener('input', function (event) {
+			var text = document.getElementById('columns');
+			if(Number(text.value) !== 0)
+				document.documentElement.style.setProperty('--columns', Number(text.value));
+			else
+				document.documentElement.style.setProperty('--columns', 8);
+			console.log(columns);
+		});
+
+		document.getElementById('default').addEventListener('input', function (event) {
+			evil()
+		});
+
+		function evil(){
+			let sortdocument = document.getElementById('default');
+			let text = sortdocument.value;
+			let sortArray = text.split(", ");
+
+			let newarray = [];
+			for(let row2 in sortArray){
+				newarray.push(Number(sortArray[row2].split(':')[1].replace(',','')));
+			}
+
+			let list = document.getElementById('list');
+			list.innerHTML = '';
+
+			const combined = sortArray.map((name, index) => ({
+				name: name,
+				index: newarray[index]
+			}));
+
+			combined.sort((a, b) => b.index - a.index);
+			console.log("combiner");
+			const sortedNames = combined.map(item => item.name);
+			sortedNames.reverse()
+			console.log(sortedNames);
+
+			//sortArray.sort(function(a, b){
+			//	return newarray.indexOf(a) - newarray.indexOf(b);
+			//});
+
+
+			for(let row in sortedNames){
+				//console.log(sortArray[row]);
+
+				if(sortedNames[row].split(":")[0] === "") continue;
+				let fragment = ('<div id=\'div' + (Number(row) + 1) + '\' class=\'divQuad\' style=\'background-image: url('+ "\"../images/survivor/" + sortedNames[row].split(":")[0] + ".png\"" + ')\'><div class=\'inside\'>' + sortedNames[row].split(":")[0] + '</div></div>');
+				list.innerHTML += fragment;
+
+			}
+			sortable( document.getElementById('list'), function (item){
+				/* console.log(item); */
+			});
+
+			console.log(text);
+		}
+
+
+		//https://codepen.io/therealDaze/pen/ZaoErp
+		function sortable(section, onUpdate){
+			var dragEl, nextEl, newPos, dragGhost;
+
+			let oldPos = [...section.children].map(item => {
+				item.draggable = true
+				let pos = document.getElementById(item.id).getBoundingClientRect();
+				return pos;
+			});
+
+			function _onDragOver(e){
+				e.preventDefault();
+				e.dataTransfer.dropEffect = 'move';
+
+				var target = e.target;
+				if( target && target !== dragEl && target.nodeName == 'DIV' ){
+
+					if(target.classList.contains('inside')) {
+						e.stopPropagation();
+					} else {
+						//getBoundinClientRect contains location-info about the element (relative to the viewport)
+						var targetPos = target.getBoundingClientRect();
+						//checking that dragEl is dragged over half the target y-axis or x-axis. (therefor the .5)
+
+						var next = (e.clientY - targetPos.top) / (targetPos.bottom - targetPos.top) > .5 || (e.clientX - targetPos.left) / (targetPos.right - targetPos.left) > .5;
+						section.insertBefore(dragEl, next && target.nextSibling || target);
+
+						/*  console.log("oldPos:" + JSON.stringify(oldPos));
+                         console.log("newPos:" + JSON.stringify(newPos)); */
+						/* console.log(newPos.top === oldPos.top ? 'They are the same' : 'Not the same'); */
+						//console.log(oldPos);
+					}
+				}
+			}
+
+			function _onDragEnd(evt){
+				evt.preventDefault();
+				newPos = [...section.children].map(child => {
+					let pos = document.getElementById(child.id);
+					return pos;
+				});
+
+				let sortdocument = document.getElementById('default');
+				let text = '';
+				for(pos in newPos){
+					var splitfirst = newPos[pos].textContent.split(":");
+					var newtext = splitfirst[0] + ":" + (Number(pos)+1);
+					console.log(newtext);
+					text += newtext;
+					if(pos <= newPos.length){
+						text += ", "
+					} else {
+						console.log(pos)
+						console.log(newPos.length)
+					}
+					newPos[pos].textContent = splitfirst[0];
+				}
+				sortdocument.value = text;
+
+				dragEl.classList.remove('ghost');
+				section.removeEventListener('dragover', _onDragOver, false);
+				section.removeEventListener('dragend', _onDragEnd, false);
+
+				nextEl !== dragEl.nextSibling ? onUpdate(dragEl) : false;
+			}
+
+			section.addEventListener('dragstart', function(e){
+				dragEl = e.target;
+				nextEl = dragEl.nextSibling;
+				/* dragGhost = dragEl.cloneNode(true);
+                dragGhost.classList.add('hidden-drag-ghost'); */
+
+				/*  document.body.appendChild(dragGhost);
+                 e.dataTransfer.setDragImage(dragGhost, 0, 0); */
+
+				e.dataTransfer.effectAllowed = 'move';
+				e.dataTransfer.setData('Text', dragEl.textContent);
+
+				section.addEventListener('dragover', _onDragOver, false);
+				section.addEventListener('dragend', _onDragEnd, false);
+
+				setTimeout(function (){
+					dragEl.classList.add('ghost');
+				}, 0)
+
+			});
+		}
+
+		sortable( document.getElementById('list'), function (item){
+			/* console.log(item); */
+		});
+
+		/* The setData() method is used to add an item to the drag data, as shown in the following example.
+
+        function dragstart_handler(ev) {
+          // Add the drag data
+          ev.dataTransfer.setData("text/plain", ev.target.id);
+          ev.dataTransfer.setData("text/html", "<p>Example paragraph</p>");
+          ev.dataTransfer.setData("text/uri-list", "http://developer.mozilla.org"); */
+
+
+		/* you may succeed this a hacky solution. The native draggability doesn't allow CSS styles like: opacity:0;, visibility:hidden or display:none.
+        But you can do it using: transform:translateX(-9999px).
+        I've updated your JSFiddle with the solution. */
+	</script>
+	</body>
+</html>
