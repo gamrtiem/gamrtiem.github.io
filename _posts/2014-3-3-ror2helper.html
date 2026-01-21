@@ -41,9 +41,12 @@
 				font-family: "bombardier" !important;
 				font-size: 20px !important;
 			}
-			#newline {
-				color: #99ff99;
-			}
+            #newline {
+                color: #99ff99;
+            }
+            #quotations {
+                color: #ff9999;
+            }
 			#buttons {
 				margin: 40px;
 			}
@@ -146,7 +149,8 @@
 				<button onclick="styleText('cLunarObjective')" class="cLunarObjective">cLunarObjective</button>
 				<br><br>
 				<button onclick="undo()" style="color: #eeeeee">undo</button>
-				<button onclick="newline()" id="newline">new line is new line? (for log formatting( uses \n when false instead</button>
+                <button onclick="newline()" id="newline">new line is new line? (for log formatting( uses \n when false instead</button>
+                <button onclick="quotationsfunc()" id="quotations">use " in color tags ? (eg. style="cIsDamage" vs style=cIsDamage</button>
 				<button onclick="example()" id="example">example item desc (coffee bag ss2 !!</button>
 			</div>
 			<div>
@@ -157,7 +161,8 @@
 		</div>
 		<script>
 			let historyarray = [];
-			let newlineisnewline = true;
+            let newlineisnewline = true;
+            let quotations = false;
 			function example(){
 				var text = document.getElementById('input');
 				text.value = "<style=cIsDamage>8%</style> chance on hit to drop a coffee bean that grants <style=cIsDamage>8% attack speed</style> and <style=cIsUtility>movement speed</style> for <style=cIsUtility>5</style> <style=cStack>(+5 per stack)</style> <style=cIsUtility>seconds</style>.";
@@ -172,7 +177,13 @@
 				console.log(selection);
 
 				if(selection !== ""){
-					text.value = preselection + "<style=\"" + string + "\">" + selection + "</style>" + postselection;
+                    if(quotations){
+                        text.value = preselection + "<style=\"" + string + "\">" + selection + "</style>" + postselection;
+                    }
+                    else
+                    {
+                        text.value = preselection + "<style=" + string + ">" + selection + "</style>" + postselection;
+                    }
 					formattext()
 				}
 
@@ -191,16 +202,27 @@
 				console.log(historyarray);
 
 			});
-			function newline(){
-				var text = document.getElementById('newline');
-				newlineisnewline = !newlineisnewline;
-				if(newlineisnewline)
-					text.style.color = "#99ff99";
-				else
-					text.style.color = "#ff9999";
+            function newline(){
+                var text = document.getElementById('newline');
+                newlineisnewline = !newlineisnewline;
+                if(newlineisnewline)
+                    text.style.color = "#99ff99";
+                else
+                    text.style.color = "#ff9999";
 
-				formattext()
-			}
+                formattext()
+            }
+
+            function quotationsfunc(){
+                var text = document.getElementById('quotations');
+                quotations = !quotations;
+                if(quotations)
+                    text.style.color = "#99ff99";
+                else
+                    text.style.color = "#ff9999";
+
+                formattext()
+            }
 
 			function formattext(){
 				var output = document.getElementById('output');
