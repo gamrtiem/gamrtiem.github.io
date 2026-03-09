@@ -151,7 +151,8 @@
 				<button onclick="undo()" style="color: #eeeeee">undo</button>
                 <button onclick="newline()" id="newline">new line is new line? (for log formatting( uses \n when false instead</button>
                 <button onclick="quotationsfunc()" id="quotations">use " in color tags ? (eg. style="cIsDamage" vs style=cIsDamage</button>
-				<button onclick="example()" id="example">example item desc (coffee bag ss2 !!</button>
+                <button onclick="example()" id="example">example item desc (coffee bag ss2 !!</button>
+                <button onclick="newlineconverter()" id="newlineconverter">convert real new lines to /n !!!</button>
 			</div>
 			<div>
 				<p>
@@ -163,11 +164,17 @@
 			let historyarray = [];
             let newlineisnewline = true;
             let quotations = false;
-			function example(){
-				var text = document.getElementById('input');
-				text.value = "<style=cIsDamage>8%</style> chance on hit to drop a coffee bean that grants <style=cIsDamage>8% attack speed</style> and <style=cIsUtility>movement speed</style> for <style=cIsUtility>5</style> <style=cStack>(+5 per stack)</style> <style=cIsUtility>seconds</style>.";
-				formattext();
-			}
+            function example(){
+                var text = document.getElementById('input');
+                text.value = "<style=cIsDamage>8%</style> chance on hit to drop a coffee bean that grants <style=cIsDamage>8% attack speed</style> and <style=cIsUtility>movement speed</style> for <style=cIsUtility>5</style> <style=cStack>(+5 per stack)</style> <style=cIsUtility>seconds</style>.";
+                formattext();
+            }
+
+            function newlineconverter(){
+                var text = document.getElementById('input');
+                text.value = text.value.replaceAll("\n", "\\n");
+                formattext();
+            }
 			function styleText(string) {
 				var text = document.getElementById('input');
 
