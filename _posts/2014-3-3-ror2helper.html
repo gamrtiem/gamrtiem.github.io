@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="../css/loading.css">
-		<script>
+		<!-script>
 			if(parent.myIframe === undefined){
 				//alert("sdgojnskfjghbdfjkgn");
 				window.location.replace("../index.html#ror2helper");
 			}
 			parent.document.title = 'risk of rain 2 lang helper !!!!!';
 			parent.history.replaceState('data to be passed', 'Title of the page', '/ror2helper');
-		</script>
+		</script-->
 
 		<meta name="darkreader-lock">
 		<link rel="icon" type="image/x-icon" href="https://github.com/gamrtiem/gamrtiem.github.io/blob/master/images/bleh.gif?raw=true">
@@ -130,6 +130,7 @@
 			</div>
 			<textarea id="input"></textarea>
 			<br>
+            <span style="color:#2dfdfd">a</span>
 			<div id="buttons">
 				<button onclick="styleText('cIsHealth')" class="cIsHealth">cIsHealth</button>
 				<button onclick="styleText('cIsDamage')" class="cIsDamage">cIsDamage</button>
@@ -238,23 +239,41 @@
 				var newtext = text.value
 				let count = 0;
 
-				while (newtext.search("</style>") !== -1) {
-					newtext = newtext.replace("</style>", "</span>");
-					count++;
-					if(count > 3000){
-						alert("infinite loop while formatting text (close style tag,.,.., oops !!");
-						return;
-					}
-				}
-				while (newtext.search("<style") !== -1) {
-					console.log(newtext.search("\"<style"));
-					newtext = newtext.replace("<style", "<span class");
-					count++;
-					if(count > 3000){
-						alert("infinite loop while formatting text (open style tag,.,.., oops !!");
-						return;
-					}
-				}
+                while (newtext.search("</style>") !== -1) {
+                    newtext = newtext.replace("</style>", "</span>");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (close style tag,.,.., oops !!");
+                        return;
+                    }
+                }
+                while (newtext.search("</color>") !== -1) {
+                    newtext = newtext.replace("</color>", "</span>");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (close style tag,.,.., oops !!");
+                        return;
+                    }
+                }
+                while (newtext.search("<style") !== -1) {
+                    console.log(newtext.search("\"<style"));
+                    newtext = newtext.replace("<style", "<span class");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (open style tag,.,.., oops !!");
+                        return;
+                    }
+                }
+
+                while (newtext.search("<color=") !== -1) {
+                    console.log(newtext.search("\"<color"));
+                    newtext = newtext.replace("<color=", "<span style=color:");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (open style tag,.,.., oops !!");
+                        return;
+                    }
+                }
 				if(newlineisnewline)
 					while (newtext.search("\n") !== -1) {
 						console.log(newtext.search("\n"));
