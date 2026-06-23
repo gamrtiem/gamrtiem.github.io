@@ -238,23 +238,41 @@
 				var newtext = text.value
 				let count = 0;
 
-				while (newtext.search("</style>") !== -1) {
-					newtext = newtext.replace("</style>", "</span>");
-					count++;
-					if(count > 3000){
-						alert("infinite loop while formatting text (close style tag,.,.., oops !!");
-						return;
-					}
-				}
-				while (newtext.search("<style") !== -1) {
-					console.log(newtext.search("\"<style"));
-					newtext = newtext.replace("<style", "<span class");
-					count++;
-					if(count > 3000){
-						alert("infinite loop while formatting text (open style tag,.,.., oops !!");
-						return;
-					}
-				}
+                while (newtext.search("</style>") !== -1) {
+                    newtext = newtext.replace("</style>", "</span>");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (close style tag,.,.., oops !!");
+                        return;
+                    }
+                }
+                while (newtext.search("</color>") !== -1) {
+                    newtext = newtext.replace("</color>", "</span>");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (close style tag,.,.., oops !!");
+                        return;
+                    }
+                }
+                while (newtext.search("<style") !== -1) {
+                    console.log(newtext.search("\"<style"));
+                    newtext = newtext.replace("<style", "<span class");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (open style tag,.,.., oops !!");
+                        return;
+                    }
+                }
+
+                while (newtext.search("<color=") !== -1) {
+                    console.log(newtext.search("\"<color"));
+                    newtext = newtext.replace("<color=", "<span style=color:");
+                    count++;
+                    if(count > 3000){
+                        alert("infinite loop while formatting text (open style tag,.,.., oops !!");
+                        return;
+                    }
+                }
 				if(newlineisnewline)
 					while (newtext.search("\n") !== -1) {
 						console.log(newtext.search("\n"));
